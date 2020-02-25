@@ -58,3 +58,17 @@
         font-family: "Montserrat-Black";
     }
 }
+.main-p-btn{
+    -webkit-box-shadow: 4px 4px 0px 1px rgba(243,172,77,1);
+    -moz-box-shadow: 4px 4px 0px 1px rgba(243,172,77,1);
+    box-shadow: 4px 4px 0px 1px rgba(243,172,77,1);
+}
+.header-link{
+    font-size: 15px;
+    line-height: 18px!important;
+    color: #fff!important;
+}
+.header-link.active{
+    text-decoration-line: underline;
+    color: #F3AC4D!important;
+}

@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/', 'PageController@index');
+Route::get('/catalog', 'PageController@catalog');
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
 });
