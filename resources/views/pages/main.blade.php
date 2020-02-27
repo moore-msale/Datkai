@@ -244,7 +244,7 @@
                         <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
                         <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
                         <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
-                        <button class="btn btn-view mt-2">Узнать цену</button>
+                        <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
                         <button class="btn btn-view mt-2">Подробнее</button>
                     </div>
                 </div>
@@ -256,7 +256,7 @@
                         <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
                         <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
                         <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
-                        <button class="btn btn-view mt-2">Узнать цену</button>
+                        <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
                         <button class="btn btn-view mt-2">Подробнее</button>
                     </div>
                 </div>
@@ -268,7 +268,7 @@
                         <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
                         <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
                         <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
-                        <button class="btn btn-view mt-2">Узнать цену</button>
+                        <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
                         <button class="btn btn-view mt-2">Подробнее</button>
                     </div>
                 </div>
@@ -280,7 +280,7 @@
                         <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
                         <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
                         <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
-                        <button class="btn btn-view mt-2">Узнать цену</button>
+                        <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
                         <button class="btn btn-view mt-2">Подробнее</button>
                     </div>
                 </div>
@@ -292,7 +292,7 @@
                         <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
                         <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
                         <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
-                        <button class="btn btn-view mt-2">Узнать цену</button>
+                        <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
                         <button class="btn btn-view mt-2">Подробнее</button>
                     </div>
                 </div>
@@ -443,6 +443,7 @@
         </div>
     </div>
 </div>
+@include('modals.get_price')
 @endsection
 @push('scripts')
     <script>

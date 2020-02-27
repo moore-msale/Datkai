@@ -13,6 +13,7 @@
 
 Route::get('/', 'PageController@index');
 Route::get('/catalog', 'PageController@catalog');
+Route::post('/sendPrice', 'MailController@sendPrice');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

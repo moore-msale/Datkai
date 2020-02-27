@@ -29,6 +29,18 @@
 </body>
 <script src="{{asset('js/app.js')}}"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="{{asset('js/main.js')}}"></script>
+<script>
+    $('.send-price').on('click',function () {
+        swal.fire({
+            position: 'top-end',
+            icon: 'info',
+            title: "Не удалось отправить писбмо!",
+            showConfirmButton:false,
+            timer:1500
+        });
+    })
+</script>
 @stack('scripts')
 
 </html>
