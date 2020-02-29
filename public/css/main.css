@@ -100,3 +100,6 @@
     background-repeat: no-repeat;
     background-position: left bottom;
 }
+.content{
+    max-width: 1920px;
+}

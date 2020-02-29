@@ -13,12 +13,12 @@
     @stack('styles')
 </head>
 <body>
-<div class="flex-center position-ref full-height" id="app"  style=" background: #FFFFFF;">
+<div class="flex-center position-ref full-height" id="app"  style="background: #FFFFFF;">
     <div class="header">
         @include('_partials.header')
     </div>
     <div class="content px-lg-5 px-0">
-        <div class="" style="position: relative;">
+        <div class="" style="position: relative;overflow: hidden;">
             @yield('content')
         </div>
     </div>
@@ -30,17 +30,16 @@
 <script src="{{asset('js/app.js')}}"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="{{asset('js/main.js')}}"></script>
-<script>
-    $('.send-price').on('click',function () {
-        swal.fire({
-            position: 'top-end',
-            icon: 'info',
-            title: "Не удалось отправить писбмо!",
-            showConfirmButton:false,
-            timer:1500
-        });
-    })
-</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 @stack('scripts')
-
+<script>
+    $(document).ready(function(){
+        $(".menu").on("click","a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top-150}, 1500);
+        });
+    });
+</script>
 </html>

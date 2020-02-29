@@ -37,22 +37,22 @@
         <div class="d-flex justify-content-center w-100">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item active px-2 ml-lg-5 ml-0">
-                    <a class="nav-link mf-light header-link" href="/">Главная <span class="sr-only">(current)</span></a>
+                    <a class="nav-link mf-light header-link" href="/">Главная </a>
                 </li>
                 <li class="nav-item px-2">
                     <a class="nav-link mf-light header-link" href="/catalog">Каталог</a>
                 </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link mf-light header-link" href="#">Партнеры</a>
+                <li class="nav-item px-2 menu">
+                    <a class="nav-link mf-light header-link" href="#partners">Партнеры</a>
+                </li>
+                <li class="nav-item px-2 menu">
+                    <a class="nav-link mf-light header-link" href="#news">Новости</a>
+                </li>
+                <li class="nav-item px-2 menu">
+                    <a class="nav-link mf-light header-link" href="#contacts">Контакты</a>
                 </li>
                 <li class="nav-item px-2">
-                    <a class="nav-link mf-light header-link" href="#">Новости</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link mf-light header-link" href="#">Контакты</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link mf-light header-link" href="#">О нас</a>
+                    <a class="nav-link mf-light header-link" href="/about-us">О нас</a>
                 </li>
             </ul>
             <ul class=" navbar-nav">

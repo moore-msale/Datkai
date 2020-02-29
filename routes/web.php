@@ -13,6 +13,8 @@
 
 Route::get('/', 'PageController@index');
 Route::get('/catalog', 'PageController@catalog');
+Route::get('/about-us', 'PageController@aboutUs');
+Route::get('/inner-product', 'PageController@innerProduct');
 Route::post('/sendPrice', 'MailController@sendPrice');
 
 Route::group(['prefix' => 'admin'], function () {

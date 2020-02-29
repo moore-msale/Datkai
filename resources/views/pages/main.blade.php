@@ -3,7 +3,7 @@
 @push('styles')
     <style>
         .main-carousel-h2{
-            font-size: 33px;
+            font-size: 20px;
             line-height: 55px;
             color: #222222;
         }
@@ -83,6 +83,13 @@
             top: 100%;
             z-index: 999999;
         }
+        .allAssortment{
+            position: absolute;
+            z-index: 999999;
+        }
+        .allAssortment{
+
+        }
         .main-carousel .slick-dots{
             text-align: left;
         }
@@ -131,10 +138,20 @@
             width: 100%;
             border-radius: 10px;
         }
+        .btn-view a{
+            text-decoration: none;
+            color: #F3AC4D;
+        }
         .tableware{
             background: #FFFFFF;
             box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.05);
         }
+        .main-carousel div{
+            outline: none!important;
+            overflow: hidden;
+            position: relative;
+        }
+
         @media only screen and (min-width: 1000px) {
             .section-4-bg-img{
                 background-image: url("/images/Group 90.png");
@@ -152,7 +169,7 @@
     </style>
 @endpush
 @section('content')
-    <div class='mt-2' style="max-height:713px;overflow: hidden;">
+    <div class='mt-2' style="max-height:713px;">
         <div class="prevNextButton-main position-relative" style="height: 30px;">
             <a class="nextBtn-main c-pointer">
                 <img src="{{asset("images/Arrow 1.png")}}" alt="">
@@ -161,7 +178,12 @@
                 <img src="{{asset("images/Arrow 2.png")}}" alt="">
             </a>
         </div>
-        <div class="main-carousel pr-0 overflow-y" style="max-height: 713px;">
+        <div class="buttons position-relative">
+            <a href="/catalog">
+                <button class="px-2 allAssortment" style="max-width: 244px;height: 47px;border:1px solid #F3AC4D;border-radius: 10px;color:#F3AC4D;background-color: transparent;">Посмотреть весь ассортимент</button>
+            </a>
+        </div>
+        <div class="main-carousel pr-0" style="max-height: 713px;">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="col-4">
                     <h2 class="mf-bold main-carousel-h2" >Удобно. <br> Надежно. <br> Безопасно.</h2>
@@ -192,7 +214,7 @@
         <div class="d-flex justify-content-center mt-5">
             <div class="col-3 px-0 d-none d-lg-block" style="transform: translateY(-20%);z-index:10;"><img src="{{asset('images/leftArt.png')}}" alt=""></div>
             <div class="col-lg-6 col-md-12 text-center">
-                <h2 class="header-30 mf-bold">Что производим?</h2>
+                <h2 class="header-30 mf-bold  mt-5 mt-lg-0">Что производим?</h2>
                 <p class="header-30-desc mf-light mt-5">
                     ОсОО «Даткай Кей Джи» - это динамично развивающаяся компания, ежегодно расширяющая производство и ассортимент выпускаемой продукции
                 </p>
@@ -202,23 +224,31 @@
         <div class="row justify-content-center" style="flex-wrap: wrap;">
             <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
                 <img class="responsive-img" src="{{asset('images/product1.png')}}" alt="">
+                <a href="/catalog">
                 <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
                 <p class="product-desc mf-medium mt-3">одноразовая посуда</p>
+                </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
                 <img class="responsive-img" src="{{asset('images/product2.png')}}" alt="">
-                <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
-                <p class="product-desc mf-medium mt-3">Синтепон/халофайбер</p>
+                <a href="/catalog#halofiber">
+                    <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
+                    <p class="product-desc mf-medium mt-3">Синтепон/халофайбер</p>
+                </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
                 <img class="responsive-img" src="{{asset('images/product3.png')}}" alt="">
-                <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
-                <p class="product-desc mf-medium mt-3">Растительное масло</p>
+                <a href="/catalog#oil">
+                    <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
+                    <p class="product-desc mf-medium mt-3">Растительное масло</p>
+                </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
                 <img class="responsive-img" src="{{asset('images/product4.png')}}" alt="">
-                <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
-                <p class="product-desc mf-medium mt-3">Услуги по стеганию</p>
+                <a href="/catalog#servcies">
+                    <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
+                    <p class="product-desc mf-medium mt-3">Услуги по стеганию</p>
+                </a>
             </div>
         </div>
     </div>
@@ -244,8 +274,8 @@
                         <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
                         <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
                         <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                        <button class="btn btn-view mt-2"><a href="/inner-product">Подробнее</a></button>
                         <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
-                        <button class="btn btn-view mt-2">Подробнее</button>
                     </div>
                 </div>
                 <div class="col-3 d-flex justify-content-center product m-4 py-5">
@@ -256,8 +286,8 @@
                         <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
                         <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
                         <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                        <button class="btn btn-view mt-2"><a href="/inner-product">Подробнее</a></button>
                         <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
-                        <button class="btn btn-view mt-2">Подробнее</button>
                     </div>
                 </div>
                 <div class="col-3 d-flex justify-content-center new-product product m-4 py-5">
@@ -268,8 +298,8 @@
                         <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
                         <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
                         <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                        <button class="btn btn-view mt-2"><a href="/inner-product">Подробнее</a></button>
                         <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
-                        <button class="btn btn-view mt-2">Подробнее</button>
                     </div>
                 </div>
                 <div class="col-3 d-flex justify-content-center product m-4 py-5">
@@ -280,8 +310,8 @@
                         <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
                         <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
                         <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                        <button class="btn btn-view mt-2"><a href="/inner-product">Подробнее</a></button>
                         <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
-                        <button class="btn btn-view mt-2">Подробнее</button>
                     </div>
                 </div>
                 <div class="col-3 d-flex justify-content-center product m-4 py-5">
@@ -292,8 +322,8 @@
                         <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
                         <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
                         <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                        <button class="btn btn-view mt-2"><a href="/inner-product">Подробнее</a></button>
                         <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
-                        <button class="btn btn-view mt-2">Подробнее</button>
                     </div>
                 </div>
             </div>
@@ -331,7 +361,7 @@
             </div>
         </div>
     </div>
-    <div class="section-5" style="margin-top: 10%;">
+    <div class="section-5" style="margin-top: 10%;" id="partners">
         <div class="d-flex justify-content-center mt-5">
             <div class="col-15 text-center">
                 <h2 class="header-30 mf-bold">Партнеры</h2>
@@ -352,7 +382,7 @@
             </div>
         </div>
     </div>
-    <div class="section-6 pr-0 overflow-hidden" style="margin-top:10%;">
+    <div class="section-6 pr-0 overflow-hidden" style="margin-top:10%;"  id="news">
         <div class="col-15 text-center px-5 d-flex justify-content-center">
             <h2 class="mf-bold">Новости</h2>
             <p class="ml-auto mf-light">Читать все новости</p>
@@ -390,56 +420,6 @@
                     <p class="product-desc mf-medium mt-3">Посуда и упаковка для кейтеринга</p>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="section-7 pr-0 d-lg-block d-none" style="margin-top:10%;">
-        <div class="col-15 text-center px-5 d-flex">
-            <h2 class="mf-bold">Контакты</h2>
-        </div>
-        <div class="d-flex mt-5 pt-5 pb-3" style="background: #F7F7F7;">
-            <div class="col-5 d-flex">
-                <div class="col-4">
-                    <img src="{{asset('images/contacts.png')}}" alt="">
-                </div>
-                <div class="col-8">
-                    <p>
-                        Кыргызская Республика, г. Бишкек, <br>
-                        ул. Армейская, 150, <br>
-                        почтовый индекс 720065.
-                    </p>
-                    <a href="https://go.2gis.com/pywad" style="color:#F3AC4D;text-decoration: underline;">Посмотреть на карте</a>
-                </div>
-            </div>
-            <div class="col-3">
-
-                <p class="mf-medium footer-headline">Отдел стегания:</p>
-                <p>+996 556 538 009 <br>
-                    +996 704 053 000</p>
-
-                <p class="mf-medium footer-headline">Отдел производства посуды и масла:</p>
-                <p>+996 555 654 499 <br>
-                    +996 553 298 989</p>
-
-            </div>
-
-            <div class="col-4">
-                <p class="mf-medium footer-headline">Отдел производства посуды и масла:</p>
-                <div class="d-flex">
-                    <div class="col-4">
-                        <img src="{{asset('images/Whatsapp.svg')}}" alt="">
-                        <p>Whatsapp</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="{{asset('images/facebook.svg')}}" alt="">
-                        <p>Facebook</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="{{asset('images/instagram.svg')}}" alt="">
-                        <p>Instagram</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
@@ -554,55 +534,65 @@
         $(document).ready(function () {
             let width = $('body').width();
             let dots = $('.main-carousel').find('.slick-dots');
+            let btn = $('.allAssortment');
             if(width>1000){
                 let h2 = $('.slick-active').find('.main-carousel-h2');
                 h2 = h2.offset();
                 let prev = $('.prevBtn-main');
                 let next = $('.nextBtn-main');
-                prev.css('top',h2.top);
+                prev.css('top',parseInt(h2.top)+70);
                 prev.css('left',parseInt(h2.left)+180);
                 next.css('left',parseInt(h2.left)-50);
-                next.css('top',h2.top);
-                dots.css('top',parseInt(h2.top)-30);
+                next.css('top',parseInt(h2.top)+70);
+                dots.css('top',parseInt(h2.top)+40);
                 dots.css('left',parseInt(h2.left)+42);
+                btn.css('left',parseInt(h2.left)-50);
+                btn.css('top',parseInt(h2.top)-20);
             }else{
                 let h2 = $('.slick-active').find('.main-carousel-h2');
                 h2 = h2.offset();
                 let prev = $('.prevBtn-main');
                 let next = $('.nextBtn-main');
-                prev.css('top',parseInt(h2.top)+120);
+                prev.css('top',parseInt(h2.top)+190);
                 prev.css('left',parseInt(h2.left)+180);
                 next.css('left',parseInt(h2.left));
-                next.css('top',parseInt(h2.top)+120);
-                dots.css('top',parseInt(h2.top)+87);
+                next.css('top',parseInt(h2.top)+190);
+                dots.css('top',parseInt(h2.top)+157);
                 dots.css('left',parseInt(h2.left)+70);
+                btn.css('left',parseInt(h2.left)-10);
+                btn.css('top',parseInt(h2.top)+80);
             }
         });
         $(window).resize(function() {
             let width = $('body').width();
             let dots = $('.main-carousel').find('.slick-dots');
+            let btn = $('.allAssortment');
             if(width>1000){
                 let h2 = $('.slick-active').find('.main-carousel-h2');
                 h2 = h2.offset();
                 let prev = $('.prevBtn-main');
                 let next = $('.nextBtn-main');
-                prev.css('top',h2.top);
+                prev.css('top',parseInt(h2.top)+70);
                 prev.css('left',parseInt(h2.left)+180);
                 next.css('left',parseInt(h2.left)-50);
-                next.css('top',h2.top);
-                dots.css('top',parseInt(h2.top)-30);
+                next.css('top',parseInt(h2.top)+70);
+                dots.css('top',parseInt(h2.top)+40);
                 dots.css('left',parseInt(h2.left)+42);
+                btn.css('left',parseInt(h2.left)-50);
+                btn.css('top',parseInt(h2.top)-20);
             }else{
                 let h2 = $('.slick-active').find('.main-carousel-h2');
                 h2 = h2.offset();
                 let prev = $('.prevBtn-main');
                 let next = $('.nextBtn-main');
-                prev.css('top',parseInt(h2.top)+120);
+                prev.css('top',parseInt(h2.top)+190);
                 prev.css('left',parseInt(h2.left)+180);
                 next.css('left',parseInt(h2.left));
-                next.css('top',parseInt(h2.top)+120);
-                dots.css('top',parseInt(h2.top)+87);
+                next.css('top',parseInt(h2.top)+190);
+                dots.css('top',parseInt(h2.top)+157);
                 dots.css('left',parseInt(h2.left)+70);
+                btn.css('left',parseInt(h2.left)-10);
+                btn.css('top',parseInt(h2.top)+80);
             }
         });
     </script>

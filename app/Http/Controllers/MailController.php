@@ -23,7 +23,9 @@ class MailController extends Controller
 
         return response()->json([
             'status' => "success",
+            'name'=>$name,
+            'phone'=>$phone,
+            'email'=>$email,
         ]);
-
     }
 }

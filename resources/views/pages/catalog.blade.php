@@ -113,11 +113,14 @@
             border-radius: 20px;
             z-index: 11;
         }
+        .product-image{
+            width: 100%;
+        }
         .product:hover .overlay{
             display: block!important;
             position: absolute; /* Sit on top of the page content */ /* Hidden by default */
-            width: 100%; /* Full width (cover the whole page) */
-            height: 100%; /* Full height (cover the whole page) */
+            width: 100%;
+            height: 100%;
             top: 0;
             left: 0;
             background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(231, 179, 109, 0.734272) 60.72%, #F3AC4D 100%);
@@ -126,7 +129,7 @@
             cursor: pointer;
         }
         .product:hover .spec{
-            position: absolute; /* Sit on top of the page content */ /* Hidden by default */
+            position: absolute;
             bottom:20%;
             z-index: 3;
             display: block!important;
@@ -158,86 +161,709 @@
     </style>
 @endpush
 @section('content')
-    <div class="tab-content row ml-0 px-5" id="myTabContent">
-        <div class="pt-4 col-12">
-            <div class="pl-1">
-                <div class="p-3">
-                    <div class="tab d-flex nav" role="tablist">
-                        <div class="col-lg-3 col-md-6">
-                            <a class="nav-link btn rounded-0 border-0 btn-block text-left mf-light p-2 pl-3 catalogTabs active" href="#tableware" data-toggle="tab" role="tab"  style="box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);">Одноразовая посуда</a>
+    <div class="d-flex nav nav-tabs mt-5 border-0" role="tablist">
+        <div class="col-lg-3 col-sm-6 mt-4 mt-lg-0 nav-item">
+            <a class="nav-link btn rounded-0 border-0 btn-block text-left mf-light p-2 pl-3 catalogTabs active" href="#tableware" data-toggle="tab" role="tab"  style="box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);">Одноразовая посуда</a>
+        </div>
+        <div class="col-lg-3 col-sm-6 mt-4 mt-lg-0 nav-item">
+            <a class="nav-link btn rounded-0 border-0 btn-block text-left mf-light p-2 pl-3 catalogTabs"  href="#halofiber" data-toggle="tab" role="tab"  style="box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);">Синтепон / халофайбер</a>
+        </div>
+        <div class="col-lg-3 col-sm-6 mt-4 mt-lg-0 nav-item">
+            <a class="nav-link btn rounded-0 border-0 btn-block text-left mf-light p-2 pl-3 catalogTabs"  href="#oil" data-toggle="tab" role="tab"  style="box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);">Растительное масло</a>
+        </div>
+        <div class="col-lg-3 col-sm-6 mt-4 mt-lg-0 nav-item">
+            <a class="nav-link btn rounded-0 border-0 btn-block text-left mf-light p-2 pl-3 catalogTabs"  href="#servcies" data-toggle="tab" role="tab"  style="box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);">Услуги по стеганию</a>
+        </div>
+    </div>
+    <div class="tab-content" id="myTabContent">
+        <div class="pt-4 tab-pane fade active show s-activeTab w-100" id="tableware" style="flex-wrap: wrap;">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                            <a class="nav-link btn rounded-0 border-0 btn-block text-left mf-light p-2 pl-3 catalogTabs"  href="#halofiber" data-toggle="tab" role="tab"  style="box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);">Синтепон / халофайбер</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
                         </div>
-                        <div class="col-lg-3 col-md-6 mt-md-4 mt-lg-0">
-                            <a class="nav-link btn rounded-0 border-0 btn-block text-left mf-light p-2 pl-3 catalogTabs"  href="#oil" data-toggle="tab" role="tab"  style="box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);">Растительное масло</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay d-none px-2"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
                         </div>
-                        <div class="col-lg-3 col-md-6 mt-md-4 mt-lg-0">
-                            <a class="nav-link btn rounded-0 border-0 btn-block text-left mf-light p-2 pl-3 catalogTabs"  href="#servcies" data-toggle="tab" role="tab"  style="box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);">Услуги по стеганию</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay d-none px-2"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay d-none px-2"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay d-none px-2"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="d-flex pt-4  tab-pane fade active show s-activeTab w-100" id="tableware" style="flex-wrap: wrap;">
-            <div class="col-lg-3 col-md-6 col-xs-12 py-5">
-                <div class="px-4 d-flex justify-content-center w-100 product">
-                    <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
-                    <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
-                    <div class="overlay"></div>
-                    <div class="spec d-none w-100 px-4">
-                        <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
-                        <button class="btn btn-view mt-2">Узнать цену</button>
-                        <button class="btn btn-view mt-2">Подробнее</button>
+        <div class="pt-4 tab-pane fade s-activeTab w-100" id="halofiber" style="flex-wrap: wrap;">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay d-none px-2"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay d-none px-2"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay d-none px-2"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay d-none px-2"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-xs-12 py-5">
-                <div class="px-4 d-flex justify-content-center w-100 product">
-                    <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
-                    <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
-                    <div class="overlay"></div>
-                    <div class="spec d-none w-100 px-4">
-                        <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
-                        <button class="btn btn-view mt-2">Узнать цену</button>
-                        <button class="btn btn-view mt-2">Подробнее</button>
+        </div>
+        <div class="pt-4 tab-pane fade s-activeTab w-100" id="oil" style="flex-wrap: wrap;">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay d-none px-2"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-xs-12 py-5">
-                <div class="px-4 d-flex justify-content-center w-100 product">
-                    <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
-                    <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
-                    <div class="overlay d-none px-2"></div>
-                    <div class="spec d-none w-100 px-4">
-                        <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
-                        <button class="btn btn-view mt-2">Узнать цену</button>
-                        <button class="btn btn-view mt-2">Подробнее</button>
+        </div>
+        <div class="pt-4 tab-pane fade s-activeTab w-100" id="servcies" style="flex-wrap: wrap;">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-xs-12 py-5">
-                <div class="px-4 d-flex justify-content-center w-100 product">
-                    <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
-                    <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
-                    <div class="overlay"></div>
-                    <div class="spec d-none w-100 px-4">
-                        <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
-                        <button class="btn btn-view mt-2">Узнать цену</button>
-                        <button class="btn btn-view mt-2">Подробнее</button>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay d-none px-2"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay d-none px-2"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
+                        <div class="overlay d-none px-2"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 py-5">
+                    <div class="px-4 d-flex justify-content-center w-100 product">
+                        <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
+                        <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
+                            <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
+                            <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                            <button class="btn btn-view mt-2">Подробнее</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    @include('modals.get_price')
 @endsection
 @push('scripts')
+    <script>
+        $(document).on('click','.nav-link',function (e) {
+            $('.nav-link').removeClass('active');
+            $(e.currentTarget).addClass('active');
+        });
+        $(document).ready(function () {
+            let pathname = (window.location.href);
+            history.replaceState && history.replaceState(null,'',pathname.split('#')[0]);
+            pathname = pathname.split('#')[1];
+            $('.nav-link[href="#'+pathname+'"]').trigger('click');
+        });
+    </script>
 @endpush
