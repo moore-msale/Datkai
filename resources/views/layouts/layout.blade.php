@@ -36,9 +36,15 @@
     $(document).ready(function(){
         $(".menu").on("click","a", function (event) {
             event.preventDefault();
-            var id  = $(this).attr('href'),
-                top = $(id).offset().top;
-            $('body,html').animate({scrollTop: top-150}, 1500);
+            var id  = $(this).attr('href');
+            if(Object.entries($(id)).length!=0){
+                var top = $(id).offset().top;
+                $('body,html').animate({scrollTop: top-150}, 1500);
+            }else{
+                let pathname = (window.location.origin);
+                console.log(pathname+'/'+id);
+                window.location = pathname+'/'+id;
+            }
         });
     });
 </script>
