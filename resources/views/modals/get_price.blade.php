@@ -11,6 +11,7 @@
                 <form action="">
                     <h3 class="modal-title mf-bold text-center">Узнать цену</h3>
                     <input id="token" value="{{csrf_token()}}" type="hidden">
+                    <input id="product-id" value="" type="hidden">
                     <input id="client-name" class="w-100 mt-3 modal-input" type="text" placeholder="Ваше имя*" required>
                     <input id="client-phone" class="w-100 mt-3 modal-input" type="number" placeholder="Ваше номер телефона*" required>
                     <input id="client-email" class="w-100 mt-3 modal-input" type="email" placeholder="Ваше e-mail">

@@ -14,7 +14,9 @@
 Route::get('/', 'PageController@index');
 Route::get('/catalog', 'PageController@catalog');
 Route::get('/about-us', 'PageController@aboutUs');
-Route::get('/inner-product', 'PageController@innerProduct');
+Route::get('news','PageController@news');
+Route::get('/inner-product/{id}', 'PageController@innerProduct');
+Route::get('news/{id}','PageController@innerNews');
 Route::post('/sendPrice', 'MailController@sendPrice');
 
 Route::group(['prefix' => 'admin'], function () {

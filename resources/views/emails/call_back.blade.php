@@ -12,11 +12,10 @@
                     </div>
                 </div>
                 <div style="padding:7%;background: #FFFFFF;width:100%;height:50%;font-size: 14px;">
-                    <p style="color: #8F39FC;text-decoration: underline; margin-bottom: 10%;line-height: 110%;">Хотят узнать цену!</p>
+                    <p style="color: #8F39FC;text-decoration: underline; margin-bottom: 10%;line-height: 110%;">Заказали обратный звонок!</p>
                     <p style="color: #676767; margin-top:5%; margin-bottom:5%;">Имя: <span style="color:#000;">{{$array[0]}}</span></p>
                     <p style="color: #676767; margin-top:5%; margin-bottom:5%;">Номер: <span style="color:#000;">{{$array[1]}}</span></p>
                     <p style="color: #676767; margin-top:5%; margin-bottom:5%;">E-mail: <span style="color:#000;">{{$array[2]}}</span></p>
-                    <p style="color: #676767; margin-top:5%; margin-bottom:5%;">Товар: <span style="color:#000;">{{$array[3]}}</span></p>
                     <div style="border-bottom: 1px solid #787878;margin-top:30px;"></div>
                 </div>
                 <div style="width:100%;height:25%;padding:7%;background: #FFFFFF;display: flex;">

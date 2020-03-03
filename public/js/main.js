@@ -1,5 +1,6 @@
 $(document).on('click','.send-price',e=>{
     let token = $('#getPrice').find('#token');
+    let id = $('#getPrice').find('#product-id');
     let name = $('#getPrice').find('#client-name');
     let phone = $('#getPrice').find('#client-phone');
     let email = $('#getPrice').find('#client-email');
@@ -33,6 +34,7 @@ $(document).on('click','.send-price',e=>{
             method:'POST',
             data:{
                 '_token':token.val(),
+                'id':id.val(),
                 'name':name.val(),
                 'phone':phone.val(),
                 'email':email.val()
@@ -64,4 +66,154 @@ $(document).on('click','.send-price',e=>{
         })
     }
 
+});
+$('.main-carousel').slick({
+    centerPadding: '10px',
+    slidesToShow: 1,
+    dots: true,
+    arrows:true,
+    // autoplay:true,
+    infinite:true,
+});
+
+$('.single-item').slick({
+    centerPadding: '10px',
+    slidesToShow: 4,
+    dots: false,
+    arrows:false,
+    autoplay:true,
+    infinite:true,
+    responsive: [
+        {
+            breakpoint: 1400,
+            settings: {
+                arrows: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 1200,
+            settings: {
+                arrows: true,
+                centerPadding: '40px',
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                arrows: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+        }
+    ]
+});
+
+$('.partners-carousel').slick({
+    centerPadding: '30px',
+    slidesToShow: 4,
+    dots: false,
+    arrows:false,
+    autoplay:true,
+    infinite:true,
+});
+$('.news-carousel').slick({
+    centerPadding: '10px',
+    slidesToShow: 3,
+    centerMode: false,
+    dots: true,
+    arrows:true,
+    autoplay:true,
+    infinite:true,
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                arrows: true,
+                centerPadding: '40px',
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                arrows: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+        }
+    ]
+});
+
+$('.prevBtn-news').on('click',function (e) {
+    $('.news-carousel').slick('slickPrev');
+});
+$('.nextBtn-news').on('click',function (e) {
+    $('.news-carousel').slick('slickNext');
+});
+$('.prevBtn-main').on('click',function (e) {
+    $('.main-carousel').slick('slickPrev');
+});
+$('.nextBtn-main').on('click',function (e) {
+    $('.main-carousel').slick('slickNext');
+});
+$('.prevBtn-single').on('click',function (e) {
+    $('.single-item').slick('slickPrev');
+});
+$('.nextBtn-single').on('click',function (e) {
+    $('.single-item').slick('slickNext');
+});
+$(document).ready(function () {
+   let buttons = $('.prevNextButton-main');
+   $('.main-carousel').find('.slick-dots').before(buttons);
+});
+$(document).ready(function () {
+    let width = $('body').width();
+    let btn = $('.allAssortment');
+    let btn2 = $('.allAssortment2');
+    let maxHeight = 0;
+    let h2_max = 0;
+    $(".main-carousel-h2").each(function(){
+        if ($(this).height() > maxHeight) { maxHeight = $(this).height(); h2_max = $(this);}
+    });
+    let h2 = $('.slick-active').find('.main-carousel-h2');
+    h2_max = h2_max.offset();
+    h2 = h2.offset();
+    if(width>1000){
+        btn2.addClass('d-none');
+        btn.removeClass('d-none');
+        btn.css('left',parseInt(h2.left)-50);
+        btn.css('top',parseInt(h2_max.top)+70);
+    }else{
+        btn.addClass('d-none');
+        btn2.removeClass('d-none');
+    }
+});
+$(window).resize(function() {
+    let width = $('body').width();
+    let btn = $('.allAssortment');
+    let btn2 = $('.allAssortment2');
+    let maxHeight = 0;
+    let h2_max = 0;
+    $(".main-carousel-h2").each(function(){
+        if ($(this).height() > maxHeight) { maxHeight = $(this).height(); h2_max = $(this);}
+    });
+    let h2 = $('.slick-active').find('.main-carousel-h2');
+    h2_max = h2_max.offset();
+    h2 = h2.offset();
+    if(width>1000){
+        btn2.addClass('d-none');
+        btn.removeClass('d-none');
+        btn.css('left',parseInt(h2.left)-50);
+        btn.css('top',parseInt(h2_max.top)+70);
+    }else{
+        btn.addClass('d-none');
+        btn2.removeClass('d-none');
+    }
+});
+$(document).ready(function() {
+    $('.menu-navigation li.active').removeClass('active');
+    $('.menu-navigation li a[href="' + location.pathname + '"]').closest('li').addClass('active');
 });

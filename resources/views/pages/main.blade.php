@@ -1,599 +1,252 @@
 @extends('layouts.layout')
-
-@push('styles')
+@push("styles")
     <style>
-        .main-carousel-h2{
-            font-size: 20px;
-            line-height: 55px;
-            color: #222222;
-        }
-        .header-30{
-            font-size: 30px;
-            line-height: 37px;
-            text-align: center;
-            color: #222222;
-        }
-        .c-pointer{
-            cursor: pointer!important;
-        }
-        .header-30-desc{
-            font-size: 18px;
-            line-height: 22px;
-            text-align: center;
-            color: #222222;
-        }
-        .product-desc{
-            font-size: 18px;
-            line-height: 22px;
-            color: #222222;
-        }
-
-        .responsive-img{
-            width: 85%;
-            height: 85%;
-            object-fit: cover;
-        }
-        .news-content{
-            background: #FFFFFF;
-            box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.05);
-        }
-        .footer-headline{
-            font-size: 18px;
-            line-height: 22px;
-            color: #878787;
-        }
-        .advantages-text{
-            font-size: 18px;
-            line-height: 22px;
-            color: #222222;
-        }
-        .prevBtn-news{
-            position: absolute;
-            top: 625%;
-            right: 0%;
-            z-index: 999999;
-        }
-        .nextBtn-news{
-            position: absolute;
-            top: 625%;
-            left: 0%;
-            z-index: 999999;
-        }
-        .prevBtn-single{
-            position: absolute;
-            top: 800%;
-            right: 0%;
-            z-index: 999999;
-        }
-        .nextBtn-single{
-            position: absolute;
-            top: 800%;
-            left: 0%;
-            z-index: 999999;
-        }
-        .prevBtn-main{
-            position: absolute;
-            left: 60%;
-            top:100%;
-            z-index: 999999;
-        }
-        .nextBtn-main{
-            position: absolute;
-            left: 35%;
-            top: 100%;
-            z-index: 999999;
-        }
-        .allAssortment{
-            position: absolute;
-            z-index: 999999;
-        }
-        .allAssortment{
-
-        }
-        .main-carousel .slick-dots{
-            text-align: left;
-        }
-        .catalog:hover .product-desc{
-            color:#F3AC4D!important;
-            text-decoration: underline;
-        }
-        .catalog:hover button{
-            position: absolute;
-            bottom: 20%;
-            display: block!important;
-        }
-        .new-product .new-mark{
-            display: block!important;
-            position: absolute;
-            top: 0%;
-            left: -1.5%;
-        }
-        .product{
-            background: #FFFFFF;
-            box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.05);
-            border-radius: 20px;
-            z-index: 11;
-        }
-        .product:hover .overlay{
-            display: block!important;
-            position: absolute; /* Sit on top of the page content */ /* Hidden by default */
-            width: 100%; /* Full width (cover the whole page) */
-            height: 100%; /* Full height (cover the whole page) */
-            top: 0;
-            left: 0;
-            background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(231, 179, 109, 0.734272) 60.72%, #F3AC4D 100%);
-            z-index: 2;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-        .product:hover .spec{
-            position: absolute; /* Sit on top of the page content */ /* Hidden by default */
-            bottom:20%;
-            z-index: 3;
-            display: block!important;
-        }
-        .btn-view{
-            background: #FFFFFF;
-            color: #F3AC4D;
-            width: 100%;
-            border-radius: 10px;
-        }
-        .btn-view a{
-            text-decoration: none;
-            color: #F3AC4D;
-        }
-        .tableware{
-            background: #FFFFFF;
-            box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.05);
-        }
-        .main-carousel div{
-            outline: none!important;
-            overflow: hidden;
-            position: relative;
-        }
-
         @media only screen and (min-width: 1000px) {
-            .section-4-bg-img{
-                background-image: url("/images/Group 90.png");
+            .background-carousel-image {
+                background-image: url("{{asset('storage/images/'.$main->section_1_slide_1_img)}}");
                 background-repeat: no-repeat;
-                background-position: left center;
-                background-size: cover;
-                border-radius: 50px;
-                padding-left: 10px;
-                padding-right: 10px;
+                background-size: 70%;
+                background-position: right top;
             }
-            .main-carousel-h2{
-                font-size: 45px;
+
+            .background-carousel-image-1 {
+                background-image: url("{{asset('storage/images/'.$main->section_1_slide_2_img)}}");
+                background-repeat: no-repeat;
+                background-size: 70%;
+                background-position: right top;
+            }
+
+            .background-carousel-image-2 {
+                background-image: url("{{asset('storage/images/'.$main->section_1_slide_3_img)}}");
+                background-repeat: no-repeat;
+                background-size: 70%;
+                background-position: right top;
             }
         }
     </style>
 @endpush
 @section('content')
-    <div class='mt-2' style="max-height:713px;">
-        <div class="prevNextButton-main position-relative" style="height: 30px;">
-            <a class="nextBtn-main c-pointer">
-                <img src="{{asset("images/Arrow 1.png")}}" alt="">
-            </a>
-            <a class="prevBtn-main c-pointer ml-auto">
-                <img src="{{asset("images/Arrow 2.png")}}" alt="">
-            </a>
-        </div>
+    <div class='main-content'>
         <div class="buttons position-relative">
             <a href="/catalog">
                 <button class="px-2 allAssortment" style="max-width: 244px;height: 47px;border:1px solid #F3AC4D;border-radius: 10px;color:#F3AC4D;background-color: transparent;">Посмотреть весь ассортимент</button>
+                <button class="px-2 allAssortment2 d-none" style="max-width: 244px;height: 47px;border:1px solid #F3AC4D;border-radius: 10px;color:#F3AC4D;background-color: transparent;">Посмотреть весь ассортимент</button>
             </a>
         </div>
-        <div class="main-carousel pr-0" style="max-height: 713px;">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="col-4">
-                    <h2 class="mf-bold main-carousel-h2" >Удобно. <br> Надежно. <br> Безопасно.</h2>
-                </div>
-                <div class="col-8 background-carousel-image overflow-hidden d-flex justify-content-end" style="max-height: 713px;">
-                    <img src="{{asset('images/image 11.png')}}" alt="" style="width: 80%;">
-                </div>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="col-4">
-                    <h2 class="mf-bold main-carousel-h2" >Удобно. <br> Надежно. <br> Безопасно.</h2>
-                </div>
-                <div class="col-8 background-carousel-image overflow-hidden d-flex justify-content-end" style="max-height: 713px;">
-                    <img src="{{asset('images/image 11.png')}}" alt="" style="width: 80%;">
+        <div class="main-carousel pr-0 mb-5">
+            <div class="d-flex justify-content-between background-carousel-image height-auto" style="height:713px;">
+                <div class="col-lg-5 col-12  mt-5">
+                    <h2 class="mf-bold main-carousel-h2 mb-2 mt-5"  data-count="{{strlen($main->section_1_slide_1_description)+strlen($main->section_1_slide_1_additional_description)}}">{!! $main->section_1_slide_1_description !!}</h2>
+                    <p class="mf-bold">{!! $main->section_1_slide_1_additional_description !!}</p>
+                    <img class="responsive-img-100 d-block d-lg-none" src="{{asset('storage/images/'.$main->section_1_slide_1_img)}}" alt="">
                 </div>
             </div>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="col-4">
-                    <h2 class="mf-bold main-carousel-h2" >Удобно. <br> Надежно. <br> Безопасно.</h2>
+            <div class="d-flex justify-content-between  background-carousel-image-1 height-auto" style="height:713px;">
+                <div class="col-lg-5 col-12  mt-5">
+                    <h2 class="mf-bold main-carousel-h2 mb-2 mt-5" data-count="{{strlen($main->section_1_slide_2_description)+strlen($main->section_1_slide_2_additional_description)}}">{!! $main->section_1_slide_2_description !!}</h2>
+                    <p class="mf-bold">{!! $main->section_1_slide_2_additional_description !!}</p>
+                    <img class="responsive-img-100 d-block d-lg-none" src="{{asset('storage/images/'.$main->section_1_slide_2_img)}}" alt="">
                 </div>
-                <div class="col-8 background-carousel-image overflow-hidden d-flex justify-content-end" style="max-height: 713px;">
-                    <img src="{{asset('images/image 11.png')}}" alt="" style="width: 80%;">
+            </div>
+            <div class="d-flex justify-content-between  background-carousel-image-2 height-auto" style="height:713px;">
+                <div class="col-lg-5 col-12  mt-5">
+                    <h2 class="mf-bold main-carousel-h2 mb-2 mt-5" data-count="{{strlen($main->section_1_slide_3_description)+strlen($main->section_1_slide_2_additional_description)}}">{!! $main->section_1_slide_3_description !!}</h2>
+                    <p class="mf-bold">{!! $main->section_1_slide_3_additional_description !!}</p>
+                    <img  class="responsive-img-100 d-block d-lg-none" src="{{asset('storage/images/'.$main->section_1_slide_3_img)}}" alt="">
                 </div>
             </div>
         </div>
+        <ul class="prevNextButton-main position-relative mb-0" style="height: 30px;">
+            <a class="nextBtn-main c-pointer">
+                <img src="{!! asset("images/Arrow 1.png") !!} " alt="">
+            </a>
+            <a class="prevBtn-main c-pointer ml-auto">
+                <img src="{!! asset("images/Arrow 2.png") !!} " alt="">
+            </a>
+        </ul>
     </div>
-    <div class="section-2 my-5 overflow-hidden">
-        <div class="d-flex justify-content-center mt-5">
-            <div class="col-3 px-0 d-none d-lg-block" style="transform: translateY(-20%);z-index:10;"><img src="{{asset('images/leftArt.png')}}" alt=""></div>
-            <div class="col-lg-6 col-md-12 text-center">
-                <h2 class="header-30 mf-bold  mt-5 mt-lg-0">Что производим?</h2>
+    <div class="section-2 my-5">
+        <div class="d-flex justify-content-center" style="height: 250px;">
+            <div class="col-2 px-0 d-none d-lg-block" style="transform: translateY(-110%);z-index:10;"><img src="{!! asset('storage/images/leftArt.png') !!} " alt=""></div>
+            <div class="col-lg-8 col-md-12 text-center">
+                <h2 class="header-30 mf-bold mt-lg-0">{!! $main->section_2_header !!} </h2>
                 <p class="header-30-desc mf-light mt-5">
-                    ОсОО «Даткай Кей Джи» - это динамично развивающаяся компания, ежегодно расширяющая производство и ассортимент выпускаемой продукции
+                    {!! $main->section_2_description !!}
                 </p>
             </div>
-            <div class="col-3 px-0 text-right mt-4 d-none d-lg-block"><img src="{{asset('images/rightArt.png')}}" alt=""></div>
+            <div class="col-2 px-0 text-right mt-4 d-none d-lg-block" style="transform: translateY(-70%);z-index:10;"><img src="{!! asset('storage/images/rightArt.png') !!} " alt=""></div>
         </div>
         <div class="row justify-content-center" style="flex-wrap: wrap;">
             <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
-                <img class="responsive-img" src="{{asset('images/product1.png')}}" alt="">
+                <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_first_catalog_img) !!} " alt="">
                 <a href="/catalog">
                 <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
-                <p class="product-desc mf-medium mt-3">одноразовая посуда</p>
+                <p class="product-desc mf-medium mt-3">{!! $main->section_2_first_catalog !!} </p>
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
-                <img class="responsive-img" src="{{asset('images/product2.png')}}" alt="">
+                <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_second_catalog_img) !!} " alt="">
                 <a href="/catalog#halofiber">
                     <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
-                    <p class="product-desc mf-medium mt-3">Синтепон/халофайбер</p>
+                    <p class="product-desc mf-medium mt-3">{!! $main->section_2_second_catalog !!} </p>
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
-                <img class="responsive-img" src="{{asset('images/product3.png')}}" alt="">
+                <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_third_catalog_img) !!} " alt="">
                 <a href="/catalog#oil">
                     <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
-                    <p class="product-desc mf-medium mt-3">Растительное масло</p>
+                    <p class="product-desc mf-medium mt-3">{!! $main->section_2_third_catalog !!} </p>
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
-                <img class="responsive-img" src="{{asset('images/product4.png')}}" alt="">
+                <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_fourth_catalog_img) !!} " alt="">
                 <a href="/catalog#servcies">
                     <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
-                    <p class="product-desc mf-medium mt-3">Услуги по стеганию</p>
+                    <p class="product-desc mf-medium mt-3">{!! $main->section_2_fourth_catalog !!} </p>
                 </a>
             </div>
         </div>
     </div>
-    <div class="section-3"  style="margin-top: 10%">
+    <div class="section-3 "  style="margin-top: 10%">
         <div class="pr-0 overflow-hidden">
             <div class="col-15 text-center px-5">
-                <h2 class="mf-medium">Хиты продаж</h2>
+                <h2 class="mf-medium">{!! $main->section_3_header !!} </h2>
             </div>
             <div class="prevNextButton-single position-relative" style="height: 30px;">
                 <a class="nextBtn-single c-pointer">
-                    <img src="{{asset('images/leftArrow.png')}}" alt="">
+                    <img src="{!! asset('storage/images/leftArrow.png') !!} " alt="">
                 </a>
                 <a class="prevBtn-single c-pointer">
-                    <img src="{{asset('images/rightArrow.png')}}" alt="">
+                    <img src="{!! asset('storage/images/rightArrow.png') !!} " alt="">
                 </a>
             </div>
-            <div class="d-flex justify-content-center single-item py-5">
-                <div class="col-3 d-flex justify-content-center new-product product m-4 py-5">
-                    <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
-                    <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
-                    <div class="overlay"></div>
-                    <div class="spec d-none w-100 px-4">
-                        <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
-                        <button class="btn btn-view mt-2"><a href="/inner-product">Подробнее</a></button>
-                        <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+            <div class="row justify-content-center single-item">
+                @for($i=0;$i<=4;$i++)
+                    @foreach($products as $product)
+                    <div class="col-3 d-flex justify-content-center product m-4 py-5 {{$product->new ? 'new-product':''}}">
+                        <div>
+                            <img class="new-mark d-none" src="{!! asset('storage/images/new.png') !!} " alt="">
+                            <img class="responsive-img w-100" src="{!! asset('storage/images/'.$product->img) !!} " alt="" style="height: 250px; width: 250px;">
+                            <p class="mf-medium" style="color: #222">{!! $product->name !!}</p>
+                        </div>
+                        <div class="overlay"></div>
+                        <div class="spec d-none w-100 px-4">
+                            @if(isset( $product->name))
+                                <p class="mb-0 mf-light" style="color: #fff">{!! $product->name !!}</p>
+                            @endif
+                            <button class="btn btn-view mt-2"><a href="/inner-product/{{$product->id}}">Подробнее</a></button>
+                            <button class="btn btn-view mt-2 getPrice" data-toggle="modal" data-target="#getPrice" data-id="{{$product->id}}">Узнать цену</button>
+                        </div>
                     </div>
-                </div>
-                <div class="col-3 d-flex justify-content-center product m-4 py-5">
-                    <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
-                    <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
-                    <div class="overlay"></div>
-                    <div class="spec d-none w-100 px-4">
-                        <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
-                        <button class="btn btn-view mt-2"><a href="/inner-product">Подробнее</a></button>
-                        <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
-                    </div>
-                </div>
-                <div class="col-3 d-flex justify-content-center new-product product m-4 py-5">
-                    <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
-                    <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
-                    <div class="overlay d-none px-2"></div>
-                    <div class="spec d-none w-100 px-4">
-                        <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
-                        <button class="btn btn-view mt-2"><a href="/inner-product">Подробнее</a></button>
-                        <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
-                    </div>
-                </div>
-                <div class="col-3 d-flex justify-content-center product m-4 py-5">
-                    <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
-                    <img class="product-image" src="{{asset('images/container2.png')}}" alt="">
-                    <div class="overlay"></div>
-                    <div class="spec d-none w-100 px-4">
-                        <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
-                        <button class="btn btn-view mt-2"><a href="/inner-product">Подробнее</a></button>
-                        <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
-                    </div>
-                </div>
-                <div class="col-3 d-flex justify-content-center product m-4 py-5">
-                    <img class="new-mark d-none" src="{{asset('images/new.png')}}" alt="">
-                    <img class="product-image" src="{{asset('images/container1.png')}}" alt="">
-                    <div class="overlay"></div>
-                    <div class="spec d-none w-100 px-4">
-                        <p class="mb-0 mf-light" style="color: #fff">Материал изделия: ПЭТ</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Кол-во в коробе, шт.: 240</p>
-                        <p class="mb-0 mf-light" style="color: #fff">Объем короба, м3: 0.077112 </p>
-                        <button class="btn btn-view mt-2"><a href="/inner-product">Подробнее</a></button>
-                        <button class="btn btn-view mt-2" data-toggle="modal" data-target="#getPrice">Узнать цену</button>
-                    </div>
-                </div>
+                    @endforeach
+                @endfor
             </div>
         </div>
     </div>
-    <div class="section-4" style="margin: 10% 0% 17% 0%;">
+    <div class="section-4" style="margin: 0% 0% 5% 0%;">
         <div class="col-15 text-center px-5">
-            <h2 class="mf-medium">Преимущества</h2>
-            <p class="mf-light">Постоянное развитие ассортимента, совершенствование технологии, непрерывное обучение персонала, гибкость,
-                а также использование только высококачественного сырья – это приоритеты работы компании, обеспечивающие конкурентные преимущества.</p>
+            <h2 class="mf-medium">{!! $main->section_4_header !!} </h2>
+            <p class="mf-light my-4">{!! $main->section_4_description !!} </p>
         </div>
         <div class="d-flex align-items-center section-4-bg section-4-bg-img" style="flex-wrap: wrap;">
             <div class="col-md-4 col-sm-6 text-center">
-                <img src="{{asset('images/callCenter.png')}}" alt="">
-                <p class="mf-medium advantages-text">Индивидуальный <br> подход к каждому <br> клиенту</p>
+                <img src="{!! asset('storage/images/'.$main->section_4_first_img) !!} " alt="">
+                <p class="mf-medium advantages-text">{!! $main->section_4_first_description !!} </p>
             </div>
             <div class="col-md-4 col-sm-6 text-center">
-                <img src="{{asset('images/guarantee.png')}}" alt=""  style="transform: translate(-10%,20%);z-index:100">
-                <p class="mf-medium advantages-text" style="transform: translate(5%,-45%);z-index:150">Гарантия <br> качества <br> продукции</p>
+                <img src="{!! asset('storage/images/'.$main->section_4_second_img) !!} " alt=""  style="transform: translate(-10%,20%);z-index:100">
+                <p class="mf-medium advantages-text" style="transform: translate(5%,-45%);z-index:150">{!! $main->section_4_second_description !!} </p>
             </div>
             <div class="col-md-4 col-sm-6 text-center">
-                <img src="{{asset('images/ecology.png')}}" alt="">
-                <p class="mf-medium advantages-text">Экологически <br> безопасное <br> производство</p>
+                <img src="{!! asset('storage/images/'.$main->section_4_third_img) !!} " alt="">
+                <p class="mf-medium advantages-text">{!! $main->section_4_third_description !!} </p>
             </div>
             <div class="col-md-4 d-none d-lg-block">
 
             </div>
             <div class="col-md-4 col-sm-6 text-center">
-                <img src="{{asset('images/unique.png')}}" alt="">
-                <p class="mf-medium advantages-text" style="transform: translate(-5%,-90%)">Уникальные <br> технологии <br> производства</p>
+                <img src="{!! asset('storage/images/'.$main->section_4_fourth_img) !!} " alt="">
+                <p class="mf-medium advantages-text" style="transform: translate(-5%,-90%)">{!! $main->section_4_fourth_description !!} </p>
             </div>
             <div class="col-md-4 col-sm-12 text-center">
-                <img src="{{asset('images/ownLogistic.png')}}" alt="">
-                <p class="mf-medium advantages-text w-auto">Собственная   <br> логистическая <br> служба</p>
+                <img src="{!! asset('storage/images/'.$main->section_4_fifth_img) !!} " alt="">
+                <p class="mf-medium advantages-text w-auto">{!! $main->section_4_fifth_description !!} </p>
             </div>
         </div>
     </div>
-    <div class="section-5" style="margin-top: 10%;" id="partners">
-        <div class="d-flex justify-content-center mt-5">
+    <div class="section-5" id="partners">
+        <div class="d-flex justify-content-center">
             <div class="col-15 text-center">
-                <h2 class="header-30 mf-bold">Партнеры</h2>
+                <h2 class="header-30 mf-bold">{!! $main->section_5_header !!} </h2>
+                <p class="mf-light">{!! $main->section_5_description !!} </p>
+                <p class="mf-light">{!! $main->section_5_additional_description !!} </p>
             </div>
         </div>
-        <div class="d-flex justify-content-center mt-5">
+        <div class="d-flex justify-content-center mt-5 partners-carousel outline-none">
+            @foreach($partners as $partner)
             <div class="col-3 text-center px-0">
-                <img class="responsive-img" src="{{asset('images/polyer.svg')}}" alt="">
+                <img class="responsive-img" src="{!! asset('storage/images/'.$partner->img) !!} " alt="">
             </div>
-            <div class="col-3 text-center px-0">
-                <img class="responsive-img" src="{{asset('images/proteck.svg')}}" alt="">
-            </div>
-            <div class="col-3 text-center px-0">
-                <img class="responsive-img" src="{{asset('images/polyer.svg')}}" alt="">
-            </div>
-            <div class="col-3 text-center px-0">
-                <img class="responsive-img" src="{{asset('images/proteck.svg')}}" alt="">
-            </div>
+            @endforeach
+            @foreach($partners as $partner)
+                <div class="col-3 text-center px-0">
+                    <img class="responsive-img" src="{!! asset('storage/images/'.$partner->img) !!} " alt="">
+                </div>
+            @endforeach
+            @foreach($partners as $partner)
+                <div class="col-3 text-center px-0">
+                    <img class="responsive-img" src="{!! asset('storage/images/'.$partner->img) !!} " alt="">
+                </div>
+            @endforeach
         </div>
     </div>
     <div class="section-6 pr-0 overflow-hidden" style="margin-top:10%;"  id="news">
-        <div class="col-15 text-center px-5 d-flex justify-content-center">
-            <h2 class="mf-bold">Новости</h2>
-            <p class="ml-auto mf-light">Читать все новости</p>
+        <div class="col-15  px-5 d-flex justify-content-start">
+            <a style="text-decoration: none;color: #222;" href="/news">
+                <h2 class="mf-bold">{!! $main->section_6_header !!} </h2>
+            </a>
         </div>
         <div class="prevNextButton-news position-relative" style="height: 30px;">
             <a class="nextBtn-news c-pointer">
-                <img src="{{asset('images/leftArrow.png')}}" alt="">
+                <img src="{!! asset('storage/images/leftArrow.png') !!} " alt="">
             </a>
             <a class="prevBtn-news c-pointer">
-                <img src="{{asset('images/rightArrow.png')}}" alt="">
+                <img src="{!! asset('storage/images/rightArrow.png') !!} " alt="">
             </a>
         </div>
-        <div class="d-flex justify-content-center news-carousel" data-slick='{"arrows": true}'>
-            <div class="col-3 news-content d-flex justify-content-center tableware m-4">
-                <div>
-                    <img src="{{asset('images/news1.png')}}" alt="">
-                    <p class="product-desc mf-medium mt-3">Посуда и упаковка для кейтеринга</p>
-                </div>
-            </div>
-            <div class="col-3 news-content d-flex justify-content-center tableware m-4">
-                <div>
-                    <img src="{{asset('images/news2.png')}}" alt="">
-                    <p class="product-desc mf-medium mt-3">Посуда и упаковка для кейтеринга</p>
-                </div>
-            </div>
-            <div class="col-3 news-content d-flex justify-content-center tableware m-4">
-               <div>
-                   <img src="{{asset('images/news1.png')}}" alt="">
-                    <p class="product-desc mf-medium mt-3">Посуда и упаковка для кейтеринга</p>
-               </div>
-            </div>
-            <div class="col-3 news-content d-flex justify-content-center tableware m-4">
-                <div>
-                    <img src="{{asset('images/news2.png')}}" alt="">
-                    <p class="product-desc mf-medium mt-3">Посуда и упаковка для кейтеринга</p>
-                </div>
-            </div>
+        <div class="row justify-content-center news-carousel">
+            @foreach($news as $new)
+                <a href="news/{{$new->id}}">
+                    <div class="news-content d-flex justify-content-center tableware m-4 outline-none" style="max-height:450px;">
+                        <div class="px-5">
+                            <div class="d-flex justify-content-center">
+                                <img class="" src="{!! asset('storage/images/'.$new->img) !!} " alt=""  style="max-height: 320px;">
+                            </div>
+                            <p class="product-desc mf-medium mt-3">{!! Str::limit($new->header,38,'...') !!}</p>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+            @foreach($news as $new)
+                <a href="news/{{$new->id}}">
+                    <div class="news-content d-flex justify-content-center tableware m-4 outline-none" style="max-height:450px;">
+                        <div class="px-5">
+                            <div class="d-flex justify-content-center">
+                                <img class="" src="{!! asset('storage/images/'.$new->img) !!} " alt=""  style="max-height: 320px;">
+                            </div>
+                            <p class="product-desc mf-medium mt-3">{!! Str::limit($new->header,38,'...') !!}</p>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+        </div>
+        <div class="w-100 text-center my-5">
+            <a class="ml-auto mf-light" style="color: #222;" href="/news">Читать все новости</a>
         </div>
     </div>
 </div>
 @include('modals.get_price')
 @endsection
 @push('scripts')
-    <script>
-        $('.main-carousel').slick({
-            centerPadding: '10px',
-            slidesToShow: 1,
-            dots: true,
-            arrows:true,
-            autoplay:true,
-            infinite:true,
-        });
-    </script>
-    <script>
-        $('.single-item').slick({
-            centerPadding: '10px',
-            slidesToShow: 4,
-            dots: true,
-            arrows:true,
-            // autoplay:true,
-            infinite:true,
-            responsive: [
-                {
-                    breakpoint: 1400,
-                    settings: {
-                        arrows: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        arrows: true,
-                        centerPadding: '40px',
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-    </script>
 
-
-    <script>
-        $('.news-carousel').slick({
-            centerPadding: '30px',
-            slidesToShow: 3,
-            dots: true,
-            arrows:true,
-            autoplay:true,
-            infinite:true,
-            responsive: [
-                {
-                    breakpoint: 1400,
-                    settings: {
-                        arrows: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        arrows: true,
-                        centerPadding: '40px',
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 900,
-                    settings: {
-                        arrows: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-    </script>
-    <script>
-        $('.prevBtn-news').on('click',function (e) {
-            $('.news-carousel').slick('slickPrev');
-        });
-        $('.nextBtn-news').on('click',function (e) {
-            $('.news-carousel').slick('slickNext');
-        });
-        $('.prevBtn-main').on('click',function (e) {
-            $('.main-carousel').slick('slickPrev');
-        });
-        $('.nextBtn-main').on('click',function (e) {
-            $('.main-carousel').slick('slickNext');
-        });
-        $('.prevBtn-single').on('click',function (e) {
-            $('.single-item').slick('slickPrev');
-        });
-        $('.nextBtn-single').on('click',function (e) {
-            $('.single-item').slick('slickNext');
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-            let width = $('body').width();
-            let dots = $('.main-carousel').find('.slick-dots');
-            let btn = $('.allAssortment');
-            if(width>1000){
-                let h2 = $('.slick-active').find('.main-carousel-h2');
-                h2 = h2.offset();
-                let prev = $('.prevBtn-main');
-                let next = $('.nextBtn-main');
-                prev.css('top',parseInt(h2.top)+70);
-                prev.css('left',parseInt(h2.left)+180);
-                next.css('left',parseInt(h2.left)-50);
-                next.css('top',parseInt(h2.top)+70);
-                dots.css('top',parseInt(h2.top)+40);
-                dots.css('left',parseInt(h2.left)+42);
-                btn.css('left',parseInt(h2.left)-50);
-                btn.css('top',parseInt(h2.top)-20);
-            }else{
-                let h2 = $('.slick-active').find('.main-carousel-h2');
-                h2 = h2.offset();
-                let prev = $('.prevBtn-main');
-                let next = $('.nextBtn-main');
-                prev.css('top',parseInt(h2.top)+190);
-                prev.css('left',parseInt(h2.left)+180);
-                next.css('left',parseInt(h2.left));
-                next.css('top',parseInt(h2.top)+190);
-                dots.css('top',parseInt(h2.top)+157);
-                dots.css('left',parseInt(h2.left)+70);
-                btn.css('left',parseInt(h2.left)-10);
-                btn.css('top',parseInt(h2.top)+80);
-            }
-        });
-        $(window).resize(function() {
-            let width = $('body').width();
-            let dots = $('.main-carousel').find('.slick-dots');
-            let btn = $('.allAssortment');
-            if(width>1000){
-                let h2 = $('.slick-active').find('.main-carousel-h2');
-                h2 = h2.offset();
-                let prev = $('.prevBtn-main');
-                let next = $('.nextBtn-main');
-                prev.css('top',parseInt(h2.top)+70);
-                prev.css('left',parseInt(h2.left)+180);
-                next.css('left',parseInt(h2.left)-50);
-                next.css('top',parseInt(h2.top)+70);
-                dots.css('top',parseInt(h2.top)+40);
-                dots.css('left',parseInt(h2.left)+42);
-                btn.css('left',parseInt(h2.left)-50);
-                btn.css('top',parseInt(h2.top)-20);
-            }else{
-                let h2 = $('.slick-active').find('.main-carousel-h2');
-                h2 = h2.offset();
-                let prev = $('.prevBtn-main');
-                let next = $('.nextBtn-main');
-                prev.css('top',parseInt(h2.top)+190);
-                prev.css('left',parseInt(h2.left)+180);
-                next.css('left',parseInt(h2.left));
-                next.css('top',parseInt(h2.top)+190);
-                dots.css('top',parseInt(h2.top)+157);
-                dots.css('left',parseInt(h2.left)+70);
-                btn.css('left',parseInt(h2.left)-10);
-                btn.css('top',parseInt(h2.top)+80);
-            }
-        });
-    </script>
 @endpush

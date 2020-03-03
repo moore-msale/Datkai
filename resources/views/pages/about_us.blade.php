@@ -2,42 +2,11 @@
 
 @push('styles')
     <style>
-        @media only screen and (min-width: 1000px) {
-        }
-        .work-year{
-            background: #F9BB68;
-            box-shadow: -10px 14px 25px rgba(0, 0, 0, 0.08);
-            border-radius: 20px;
-        }
-        .work-year-inner{
-            border: 1px solid #FFFFFF;
-            box-shadow: -10px 14px 25px rgba(0, 0, 0, 0.08);
-            border-radius: 20px;
-        }
         .main-about-us{
-            background-image: url("{{asset('images/Group 69.png')}}");
+            background-image: url("{{ asset('storage/images/'.$about->section_1_bg_img)}}");
             background-position: right center;
             background-repeat: no-repeat;
             background-size: cover;
-        }
-        .clients-is{
-            background: #F9F6F2;
-            box-shadow: -10px 14px 25px rgba(0, 0, 0, 0.08);
-            border-radius: 20px;
-        }
-        .clients-is p{
-            font-size: 20px;
-            line-height: 140%;
-            color: #000000;
-        }
-        .section-3-about-us p{
-            font-size: 18px;
-            line-height: 140%;
-            color: #222222;
-        }
-        .section-4-about-us{
-            background: #F9F6F2;
-            box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.05);
         }
     </style>
 @endpush
@@ -46,53 +15,53 @@
     <div class='main-about-us p-md-5 p-0' style="max-height:713px;">
         <div class="d-flex align-items-between p-md-5 p-0">
             <div class="col-lg-8 col-12">
-                <h2 class="mf-bold" style="font-size: 55px;line-height: 67px;color: #222222;">Удобно. Надежно. Безопасно.</h2>
+                <h2 class="mf-bold" style="font-size: 55px;line-height: 67px;color: #222222;">{!! $about->section_1_header !!}</h2>
                 <p class="mf-light mt-5 mb-0" style="font-size: 20px;line-height: 140%;color: #222222;">
-                    Компания «Даткай KG» была основана в 2010 году, и является одной из передовых компаний в Кыргызстане
+                    {!! $about->section_1_description !!}
                 </p>
                 <div class="row mt-md-5 mt-0">
                     <div class="col-md-5 col-sm-12 d-flex align-items-center py-2">
                         <div class="work-year p-2">
                             <div class="work-year-inner px-4 py-2">
-                                <p class="mf-light mb-0" style="font-size: 20px;line-height: 140%;color: #fff;">работаем с</p>
-                                <h3 class="mf-light"  style="font-size: 55px;color: #fff;">2010</h3>
-                                <p class="mf-light mb-0" style="font-size: 20px;line-height: 140%;color: #fff;">года </p>
+                                <p class="mf-light mb-0" style="font-size: 20px;line-height: 140%;color: #fff;">{!! $about->section_1_experience_year_before !!}</p>
+                                <h3 class="mf-light"  style="font-size: 55px;color: #fff;">{!! $about->section_1_experience_year !!}</h3>
+                                <p class="mf-light mb-0" style="font-size: 20px;line-height: 140%;color: #fff;">{!! $about->section_1_experience_year_after !!}</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-7 col-sm-12 d-flex align-items-center">
                         <p class="mf-light" style="font-size: 20px;line-height: 140%;color: #222222;">
-                            Динамично развивающаяся компания, ежегодно расширяющая производство и ассортимент выпускаемой продукции
+                            {!! $about->section_1_experience_description !!}
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-12">
-                <div class="d-none d-lg-block" style="transform: translate(83%,100%);z-index:10;"><img src="{{asset('images/rightArt.png')}}" alt=""></div>
+                <div class="d-none d-lg-block" style="transform: translate(83%,100%);z-index:10;"><img src="{!! asset('storage/images/rightArt.png') !!}" alt=""></div>
             </div>
         </div>
     </div>
         <div class="section-2-about-us p-5">
             <div class="col-15 text-left">
-                <h2 class="mf-bold">Нашими клиентами являются:</h2>
+                <h2 class="mf-bold">{!! $about->section_2_header !!}</h2>
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-4 col-md-12 text-center p-4">
                     <div class="clients-is p-2">
-                        <img class="my-5" src="{{asset('images/bakery 1.png')}}" alt="">
-                        <p class="mf-light text-center mb-5">Гипермаркеты, кондитерские дома, сети фаст-фудов, HORECA</p>
+                        <img class="my-5" src="{!! asset('storage/images/'.$about->section_2_first_img) !!}" alt="">
+                        <p class="mf-light text-center mb-5">{!! $about->section_2_first_description !!}</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 text-center p-4">
                     <div class="clients-is p-2">
-                        <img class="my-5" src="{{asset('images/embroidery 1.png')}}" alt="">
-                        <p class="mf-light text-center mb-5">Швейные фабрики, фабрики по производству мягкой мебели и игрушек</p>
+                        <img class="my-5" src="{!! asset('storage/images/'.$about->section_2_second_img) !!}" alt="">
+                        <p class="mf-light text-center mb-5">{!! $about->section_2_second_description !!}</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 text-center p-4">
                     <div class="clients-is p-2">
-                        <img class="my-5" src="{{asset('images/sewing-machine 1.png')}}" alt="">
-                        <p class="mf-light text-center mb-5">Ателье, дома моды, швейные цеха, шоурумы, производители одеял</p>
+                        <img class="my-5" src="{!! asset('storage/images/'.$about->section_2_third_img) !!}" alt="">
+                        <p class="mf-light text-center mb-5">{!! $about->section_2_third_description !!}</p>
                     </div>
                 </div>
             </div>
@@ -102,53 +71,61 @@
                 <div class="col-lg-5 col-md-12 d-flex align-items-between">
                     <div>
                         <p class="mf-medium">
-                            Производственная площадка ОсОО «Даткай KG» находится в городе Бишкек, производственно-складские площади занимают
+                            {!! $about->section_3_first_block_description !!}
                         </p>
-                        <span class="mf-light mb-0 mt-2" style="font-size: 20px;line-height: 140%;color: #222;">более</span>
-                        <h3 class="mf-medium"  style="font-size: 60px;color: #F9BB68;">5 000</h3>
-                        <span class="mf-light mb-0" style="font-size: 20px;line-height: 140%;color: #222;">квадратных метров.</span>
+                        <span class="mf-light mb-0 mt-2" style="font-size: 20px;line-height: 140%;color: #222;"> {!! $about->section_3_first_block_number_befor !!}</span>
+                        <h3 class="mf-medium"  style="font-size: 60px;color: #F9BB68;">{!! $about->section_3_first_block_number !!}</h3>
+                        <span class="mf-light mb-0" style="font-size: 20px;line-height: 140%;color: #222;">{!! $about->section_3_first_block_number_after !!}</span>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-12 d-flex align-items-between py-5" style="background: #FFEAA7;">
                     <div class="">
                         <p class="mf-medium">
-                            Численность сотрудников компании составляет
+                            {!! $about->section_3_second_block_description !!}
                         </p>
-                        <span class="mf-light mb-0" style="font-size: 20px;line-height: 140%;color: #222;">около</span>
-                        <h3 class="mf-medium"  style="font-size: 60px;color: #222;">100</h3>
-                        <span class="mf-light mb-0" style="font-size: 20px;line-height: 140%;color: #222;">человек</span>
+                        <span class="mf-light mb-0" style="font-size: 20px;line-height: 140%;color: #222;"> {!! $about->section_3_second_block_number_before !!}</span>
+                        <h3 class="mf-medium"  style="font-size: 60px;color: #222;"> {!! $about->section_3_second_block_number !!}</h3>
+                        <span class="mf-light mb-0" style="font-size: 20px;line-height: 140%;color: #222;">{!! $about->section_3_second_block_number_after !!}</span>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-12 d-flex align-items-between pl-2">
                     <div>
                         <p class="mf-medium pl-5">
-                            Компания насчитывает
+                            {!! $about->section_3_third_block_description !!}
                         </p>
                         <div class="company-count">
-                            <div class="d-flex align-items-center">
-                                <div class="col-2 text-right"><img src="{{asset('images/Vector.png')}}" alt=""></div>
-                                <div class="col-10">
-                                    <span class="mf-light">собственную линию по производству нетканых материалов</span>
+                            @if(isset($about->section_3_third_block_paragraph_1))
+                                <div class="d-flex align-items-center">
+                                    <div class="col-2 text-right"><img src="{!! asset('storage/images/Vector.png') !!}" alt=""></div>
+                                    <div class="col-10">
+                                        <span class="mf-light">{!! $about->section_3_third_block_paragraph_1 !!}</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="d-flex align-items-center mt-3">
-                                <div class="col-2 text-right"><img src="{{asset('images/Vector.png')}}" alt=""></div>
-                                <div class="col-10">
-                                    <span class="mf-light">термоформовочные машины</span>
+                            @endif
+                            @if(isset($about->section_3_third_block_paragraph_2))
+                                <div class="d-flex align-items-center mt-3">
+                                    <div class="col-2 text-right"><img src="{!! asset('storage/images/Vector.png') !!}" alt=""></div>
+                                    <div class="col-10">
+                                        <span class="mf-light">{!! $about->section_3_third_block_paragraph_2 !!}</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="d-flex align-items-center mt-3">
-                                <div class="col-2 text-right"><img src="{{asset('images/Vector.png')}}" alt=""></div>
-                                <div class="col-10">
-                                    <span class="mf-light">а также насчитывает более 5 стегальных машин</span>
+                            @endif
+                            @if(isset($about->section_3_third_block_paragraph_3))
+                                <div class="d-flex align-items-center mt-3">
+                                    <div class="col-2 text-right"><img src="{!! asset('storage/images/Vector.png') !!}" alt=""></div>
+                                    <div class="col-10">
+                                        <span class="mf-light">{!! $about->section_3_third_block_paragraph_3 !!}</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="d-flex align-items-center mt-3">
-                                <div class="col-2 text-right"><img src="{{asset('images/Vector.png')}}" alt=""></div>
-                                <div class="col-10">
-                                    <span class="mf-light">собственную экструзионную линию</span>
+                            @endif
+                            @if(isset($about->section_3_third_block_paragraph_4))
+                                <div class="d-flex align-items-center mt-3">
+                                    <div class="col-2 text-right"><img src="{!! asset('storage/images/Vector.png') !!}" alt=""></div>
+                                    <div class="col-10">
+                                        <span class="mf-light">{!! $about->section_3_third_block_paragraph_4 !!}</span>
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -158,36 +135,54 @@
             <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center">
                 <div class="datkai-valuable">
                     <h2 class="mf-medium pl-4">
-                        Ценности Даткай KG
+                        {!! $about->section_4_header !!}
                     </h2>
-                    <div class="d-flex align-items-center mt-5">
-                        <div class="col-1 text-right"><img src="{{asset('images/Vector.png')}}" alt=""></div>
-                        <div class="col-11">
-                            <span class="mf-light">собственную линию по производству нетканых материалов</span>
+
+                    @if(isset($about->section_4_paragraph_1))
+                        <div class="d-flex align-items-center mt-5">
+                            <div class="col-1 text-right"><img src="{!! asset('storage/images/Vector.png') !!}" alt=""></div>
+                            <div class="col-11">
+                                <span class="mf-light">{!! $about->section_4_paragraph_1 !!}</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center mt-3">
-                        <div class="col-1 text-right"><img src="{{asset('images/Vector.png')}}" alt=""></div>
-                        <div class="col-11">
-                            <span class="mf-light">термоформовочные машины</span>
+                    @endif
+                    @if(isset($about->section_4_paragraph_2))
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="col-1 text-right"><img src="{!! asset('storage/images/Vector.png') !!}" alt=""></div>
+                            <div class="col-11">
+                                <span class="mf-light">{!! $about->section_4_paragraph_2 !!}</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center mt-3">
-                        <div class="col-1 text-right"><img src="{{asset('images/Vector.png')}}" alt=""></div>
-                        <div class="col-11">
-                            <span class="mf-light">а также насчитывает более 5 стегальных машин</span>
+                    @endif
+                    @if(isset($about->section_4_paragraph_3))
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="col-1 text-right"><img src="{!! asset('storage/images/Vector.png') !!}" alt=""></div>
+                            <div class="col-11">
+                                <span class="mf-light">{!! $about->section_4_paragraph_3 !!}</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center mt-3">
-                        <div class="col-1 text-right"><img src="{{asset('images/Vector.png')}}" alt=""></div>
-                        <div class="col-11">
-                            <span class="mf-light">собственную экструзионную линию</span>
+                    @endif
+                    @if(isset($about->section_4_paragraph_4))
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="col-1 text-right"><img src="{!! asset('storage/images/Vector.png') !!}" alt=""></div>
+                            <div class="col-11">
+                                <span class="mf-light">{!! $about->section_4_paragraph_4 !!}</span>
+                            </div>
                         </div>
-                    </div>
+                    @endif
+                    @if(isset($about->section_4_paragraph_5))
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="col-1 text-right"><img src="{!! asset('storage/images/Vector.png') !!}" alt=""></div>
+                            <div class="col-11">
+                                <span class="mf-light">{!! $about->section_4_paragraph_5 !!}</span>
+                            </div>
+                        </div>
+                    @endif
+                    <p class="mf-medium pl-4 pt-5">{!! $about->section_4_description !!}</p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12  d-flex align-items-center justify-content-end">
-                <img src="{{asset('images/Frame 1.png')}}" alt="">
+                <img src="{!! asset('storage/images/'.$about->section_4_img) !!}" alt="">
             </div>
         </div>
     </div>
