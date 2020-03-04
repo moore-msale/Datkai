@@ -72,7 +72,8 @@ $('.main-carousel').slick({
     slidesToShow: 1,
     dots: true,
     arrows:true,
-    // autoplay:true,
+    autoplay:true,
+    autoplaySpeed:3000,
     infinite:true,
 });
 
