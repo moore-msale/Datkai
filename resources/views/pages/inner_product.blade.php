@@ -5,11 +5,11 @@
     <div class="container">
         <h2 class="mf-medium mt-5">{!! $product->name !!}</h2>
         <a href="/catalog#{{$product->type}}">В каталог</a>
-        <div class="row align-items-center justify-content-center py-5">
-            <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center">
+        <div class="row justify-content-center py-5">
+            <div class="col-lg-6 col-12 d-flex justify-content-left align-items-center">
                 <img src="{!! asset('storage/images/'.$product->img) !!} " alt="" style="max-height: 250px;max-height: 250px;">
             </div>
-            <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center">
+            <div class="col-lg-6 col-12 d-flex justify-content-left">
                 <div>
                 <p class="mf-medium">
                     Характеристики:
@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="col-12 text-left py-5">
-                <button class="btn btn-view my-2 getPrice" data-toggle="modal" data-target="#getPrice" data-id="{{$product->id}}" style="width: 200px;border:1px solid #F3AC4D">Узнать цену</button>
+                <button class="btn btn-view mt-2 mb-4 getPrice" data-toggle="modal" data-target="#getPrice" data-id="{{$product->id}}" style="width: 200px;border:1px solid #F3AC4D">Узнать цену</button>
                 <p class="mf-light" style="color: #444;">{!! $product->description !!}</p>
             </div>
         </div>
