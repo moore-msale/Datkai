@@ -41,6 +41,9 @@
                     @if(isset($product->material))
                         <p class="mb-0 mf-light" style="color: #222">{{$product->setName("material",$product->material)}}</p>
                     @endif
+                    @if(isset($product->mass))
+                        <p class="mb-0 mf-light" style="color: #222">{{$product->setName("mass",$product->mass)}}</p>
+                    @endif
                     @if(isset($product->diametr))
                         <p class="mb-0 mf-light" style="color: #222">{{$product->setName("diametr",$product->diametr)}}</p>
                     @endif

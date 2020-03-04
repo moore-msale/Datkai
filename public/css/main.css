@@ -506,3 +506,193 @@
     0% {transform: rotate(0deg) scale(0.7) skew(1deg);opacity: .2;}
     50% {transform: rotate(0deg) scale(1) skew(1deg);opacity: .2;}
     100% {transform: rotate(0deg) scale(0.7) skew(1deg);opacity: .2;}}
+.sidenav {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+    right: -300px;
+    background-color: #545454;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: -9px 0 20px 0px #00000026;
+    /*padding-top: 120px;*/
+
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    /*color:white;*/
+    font-size: 20px;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: -12px;
+    right: 3px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.mo-zap {
+    font-size: 12px!important;
+    line-height: 130%;
+    border: 1px solid #FBDA55;
+    color: #fbda55!important;
+    text-align: center;
+    border-radius: 130px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 3%!important;
+    padding-bottom: 4%!important;
+    margin-bottom: 3%;
+}
+.mo-when {
+    font-size: 12px!important;
+    line-height: 130%;
+    border: 1px solid #32DDF4;
+    color: #32DDF4!important;
+    text-align: center;
+    border-radius: 130px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 3%!important;
+    padding-bottom: 4%!important;
+    margin-bottom: 3%;
+}
+.mo-zvon {
+    font-size: 12px!important;
+    line-height: 130%;
+    border: 1px solid #696EEC;
+    color: #696EEC!important;
+    text-align: center;
+    border-radius: 130px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 3%!important;
+    padding-bottom: 4%!important;
+    margin-bottom: 3%;
+}
+.mo-wha {
+    font-size: 12px!important;
+    line-height: 130%;
+    border: 1px solid #67C15E;
+    color: #67C15E!important;
+    text-align: center;
+    border-radius: 130px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 3%!important;
+    padding-bottom: 4%!important;
+    margin-bottom: 3%;
+}
+.mo-usl {
+    font-size: 12px!important;
+    line-height: 130%;
+    border: 1px solid #0ABFD8;
+    color: #494949!important;
+    text-align: center;
+    border-radius: 130px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 3%!important;
+    padding-bottom: 2%!important;
+    margin-bottom: 3%;
+    background: #0ABFD8
+}
+.mo-rabo {
+    font-size: 12px!important;
+    line-height: 130%;
+    border: 1px solid #32DDF4;
+    color: #32DDF4!important;
+    text-align: center;
+    border-radius: 130px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 3%!important;
+    padding-bottom: 2%!important;
+    margin-bottom: 3%;
+}
+.color-mo {
+    font-size: 12px!important;
+    line-height: 130%;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 4%!important;
+}
+.text-ce-mo {
+    text-align: center;
+}
+.btn-scene
+{
+    font-size:12px;
+    border:1px solid gray;
+    transition: 0.3s;
+}
+.btn-scene:hover{
+    background-color: white;
+}
+#chats
+{
+    margin-bottom: 100px!important;
+}
+.mo-one {
+    background: #494949;
+    padding-top: 0%!important;
+    padding-bottom: 5%;
+}
+.mo-two {
+    background: #545454;
+    padding-top: 5%!important;
+    padding-bottom: 5%;
+}
+.soc-mo {
+    display: flex;
+    padding-top: 7%;
+}
+.so-mo:hover {
+    background: #568dc4;
+    color: white!important;
+    box-shadow: 0px 0px 30px rgb(86, 141, 195);
+    border: 1px solid #f9f9f9;
+}
+.social
+{
+    background-color: #eeeeee;
+    border:5px solid #e6e6e6;
+    transition: 0.5s;
+}
+/*.whats-icon*/
+/*{*/
+/*animation: 3s icon forwards ease-in-out infinite;*/
+/*}*/
+.social:hover
+{
+    transform: scale(1.1);
+}
+.social
+{
+    position:fixed;
+    bottom: 5%;
+    right:2%;
+    width:70px;
+    height:70px;
+    z-index:500;
+    border-radius: 50%;
+}
+@media screen and (max-width:560px)
+{
+    .social
+    {
+        bottom:1%;
+        width:70px;
+        height: 70px;
+    }
+}

@@ -30,7 +30,7 @@
                                     <p class="mb-0 mf-light" style="color: #fff">{!! $product->name !!}</p>
                                 @endif
                                 <a href="/inner-product/{{$product->id}}"><button class="btn btn-view mt-2">Подробнее</button></a>
-                                <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                                <button class="btn btn-view mt-2 getPrice"  data-toggle="modal" data-target="#getPrice"  data-id="{{$product->id}}">Узнать цену</button>
                             </div>
                             <p class="mf-light w-100">{!!$product->name !!}</p>
                         </div>
@@ -51,7 +51,7 @@
                                     <p class="mb-0 mf-light" style="color: #fff">{!! $product->name !!}</p>
                                 @endif
                                 <a href="/inner-product/{{$product->id}}"><button class="btn btn-view mt-2">Подробнее</button></a>
-                                <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                                <button class="btn btn-view mt-2 getPrice"  data-toggle="modal" data-target="#getPrice" data-id="{{$product->id}}">Узнать цену</button>
                             </div>
                             <p class="mf-light w-100">{!!$product->name !!}</p>
 
@@ -73,7 +73,7 @@
                                     <p class="mb-0 mf-light" style="color: #fff">{!! $product->name !!}</p>
                                 @endif
                                 <a href="/inner-product/{{$product->id}}"><button class="btn btn-view mt-2">Подробнее</button></a>
-                                <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                                <button class="btn btn-view mt-2  getPrice"  data-toggle="modal" data-target="#getPrice"  data-id="{{$product->id}}">Узнать цену</button>
                             </div>
                             <p class="mf-light w-100">{!!$product->name !!}</p>
                         </div>
@@ -94,7 +94,7 @@
                                     <p class="mb-0 mf-light" style="color: #fff">{!! $product->name !!}</p>
                                 @endif
                                 <a href="/inner-product/{{$product->id}}"><button class="btn btn-view mt-2">Подробнее</button></a>
-                                <button class="btn btn-view mt-2"  data-toggle="modal" data-target="#getPrice">Узнать цену</button>
+                                <button class="btn btn-view mt-2 getPrice"  data-toggle="modal" data-target="#getPrice"  data-id="{{$product->id}}">Узнать цену</button>
                             </div>
                             <p class="mf-light w-100">{!!$product->name !!}</p>
                         </div>

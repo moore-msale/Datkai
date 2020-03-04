@@ -241,7 +241,7 @@
             @endforeach
         </div>
         <div class="w-100 text-center my-5">
-            <a class="ml-auto mf-light" style="color: #222;" href="/news">Читать все новости</a>
+            <a class="ml-auto mf-light " style="color: #222;" href="/news"><button class="main-p-btn" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;color: #fff;">Читать все новости</button></a>
         </div>
     </div>
 </div>

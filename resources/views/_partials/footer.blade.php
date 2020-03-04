@@ -11,7 +11,7 @@
                 <p>
                     {!! $settings->contacts !!}
                 </p>
-                <a href="{!! $settings->two_gis !!}" style="color:#F3AC4D;text-decoration: underline;">Посмотреть на карте</a>
+                <a href="{!! $settings->two_gis !!}" style="color:#F3AC4D;text-decoration: underline;" target="_blank">Посмотреть на карте</a>
             </div>
         </div>
         <div class="col-3">

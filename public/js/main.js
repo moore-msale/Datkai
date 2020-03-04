@@ -217,3 +217,12 @@ $(document).ready(function() {
     $('.menu-navigation li.active').removeClass('active');
     $('.menu-navigation li a[href="' + location.pathname + '"]').closest('li').addClass('active');
 });
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.right = "0px";
+};
+
+function closeNav() {
+    document.getElementById("mySidenav").style.right = "-300px";
+};

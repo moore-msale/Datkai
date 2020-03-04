@@ -78,8 +78,8 @@
                         <span class="mf-light mb-0" style="font-size: 20px;line-height: 140%;color: #222;">{!! $about->section_3_first_block_number_after !!}</span>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-12 d-flex align-items-between py-5" style="background: #FFEAA7;">
-                    <div class="">
+                <div class="col-lg-2 col-md-12 d-flex align-items-between justify-content-center py-5" style="background: #FFEAA7;">
+                    <div class="p-5">
                         <p class="mf-medium">
                             {!! $about->section_3_second_block_description !!}
                         </p>

@@ -1,5 +1,5 @@
 <div class="modal fade" id="getPrice" tabindex="-1" role="dialog" aria-labelledby="getPrice"
-     aria-hidden="true">
+     aria-hidden="true" style="margin-top: 7%;">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content get-price-model">
             <div class="modal-header">
