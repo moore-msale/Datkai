@@ -66,7 +66,7 @@ $(document).on('click','.send-price',e=>{
         })
     }
 });
-$('.partners-carousel').slick({
+$('.partners-carousel-1').slick({
     centerPadding: '10px',
     slidesToShow: 4,
     dots: false,
