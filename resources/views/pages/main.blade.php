@@ -174,7 +174,7 @@
             </div>
         </div>
     </div>
-    <div class="section-5" id="partners">
+    <div class="section-5">
         <div class="d-flex justify-content-center">
             <div class="col-15 text-center">
                 <h2 class="header-30 mf-bold">{!! $main->section_5_header !!} </h2>
@@ -182,24 +182,22 @@
                 <p class="mf-light">{!! $main->section_5_additional_description !!} </p>
             </div>
         </div>
-        <div class="mt-5">
-            <div class="d-flex justify-content-center partners-carousel">
-                @foreach($partners as $partner)
-                    <div class="text-center">
-                        <img class="responsive-img" src="{{asset('storage/images/'.$partner->img)}}" alt="">
-                    </div>
-                @endforeach
-                @foreach($partners as $partner)
-                    <div class="text-center">
-                        <img class="responsive-img" src="{{asset('storage/images/'.$partner->img)}}" alt="">
-                    </div>
-                @endforeach
-                @foreach($partners as $partner)
-                    <div class="text-center">
-                        <img class="responsive-img" src="{{asset('storage/images/'.$partner->img)}}" alt="">
-                    </div>
-                @endforeach
-            </div>
+        <div class="mt-5 d-flex justify-content-center partners-carousel">
+            @foreach($partners as $partner)
+                <div class="text-center">
+                    <img class="responsive-img" src="{{asset('storage/images/'.$partner->img)}}" alt="">
+                </div>
+            @endforeach
+            @foreach($partners as $partner)
+                <div class="text-center">
+                    <img class="responsive-img" src="{{asset('storage/images/'.$partner->img)}}" alt="">
+                </div>
+            @endforeach
+            @foreach($partners as $partner)
+                <div class="text-center">
+                    <img class="responsive-img" src="{{asset('storage/images/'.$partner->img)}}" alt="">
+                </div>
+            @endforeach
         </div>
     </div>
     <div class="section-6 pr-0 overflow-hidden" style="margin-top:10%;"  id="news">
