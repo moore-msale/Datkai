@@ -10,7 +10,7 @@
                 <img src="{!! asset('storage/images/'.$product->img) !!} " alt="" style="max-height: 250px;max-height: 250px;">
             </div>
             <div class="col-lg-6 col-12 d-flex justify-content-left">
-                <div>
+                <div class="p-2">
                 <p class="mf-medium">
                     Характеристики:
                 </p>
@@ -70,9 +70,14 @@
                     @endif
                 </div>
             </div>
-            <div class="col-12 text-left py-5">
+            <div class="col-12 text-left py-5" >
                 <button class="btn btn-view mt-2 mb-4 getPrice" data-toggle="modal" data-target="#getPrice" data-id="{{$product->id}}" style="width: 200px;border:1px solid #F3AC4D">Узнать цену</button>
-                <p class="mf-light" style="color: #444;">{!! $product->description !!}</p>
+                <div class="p-2" >
+                    <p class="mf-medium">
+                        Описание:
+                    </p>
+                    <p class="mf-light" style="color: #444;">{!! $product->description !!}</p>
+                </div>
             </div>
         </div>
     </div>

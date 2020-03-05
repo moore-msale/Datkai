@@ -224,8 +224,10 @@ $(document).ready(function() {
 
 function openNav() {
     document.getElementById("mySidenav").style.right = "0px";
+    $('.backdrop').removeClass('d-none');
 };
 
 function closeNav() {
     document.getElementById("mySidenav").style.right = "-300px";
+    $('.backdrop').addClass('d-none');
 };

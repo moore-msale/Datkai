@@ -55,8 +55,10 @@
     <div class="pl-0 w-100" id="navbarSupportedContent2">
         <div class="d-lg-flex d-md-block justify-content-center w-100">
             <div class="col-lg-3 col-md-12 text-center">
+                <a href="/" >
                 <img src="{!! asset('storage/images/'.$settings->logo) !!}" alt="">
-                <a class="navbar-brand pl-2 mf-medium" href="/" style="color:#BCBCBC;">{!! $settings->name !!}</a>
+                <p  class="navbar-brand pl-2 mf-medium" style="color:#BCBCBC;">{!! $settings->name !!}</p>
+                </a>
             </div>
             <ul class="col-lg-6 d-flex align-items-center menu-navigation" style="flex-wrap: wrap;list-style:none;">
                 <li class="col-lg-2 col-md-6 text-center nav-item active px-2">

@@ -78,29 +78,29 @@
         </div>
         <div class="row justify-content-center" style="flex-wrap: wrap;">
             <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
-                <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_first_catalog_img) !!} " alt="">
-                <a href="/catalog">
-                <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
-                <p class="product-desc mf-medium mt-3">{!! $main->section_2_first_catalog !!} </p>
+                <a href="/catalog" class="w-100">
+                    <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_first_catalog_img) !!} " alt="">
+                    <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
+                    <p class="product-desc mf-medium mt-3">{!! $main->section_2_first_catalog !!} </p>
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
-                <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_second_catalog_img) !!} " alt="">
-                <a href="/catalog#halofiber">
+                <a href="/catalog#halofiber"  class="w-100">
+                    <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_second_catalog_img) !!} " alt="">
                     <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
                     <p class="product-desc mf-medium mt-3">{!! $main->section_2_second_catalog !!} </p>
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
-                <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_third_catalog_img) !!} " alt="">
-                <a href="/catalog#oil">
+                <a href="/catalog#oil"  class="w-100">
+                    <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_third_catalog_img) !!} " alt="">
                     <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
                     <p class="product-desc mf-medium mt-3">{!! $main->section_2_third_catalog !!} </p>
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
-                <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_fourth_catalog_img) !!} " alt="">
-                <a href="/catalog#servcies">
+                <a href="/catalog#servcies" class="w-100">
+                    <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_fourth_catalog_img) !!} " alt="">
                     <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
                     <p class="product-desc mf-medium mt-3">{!! $main->section_2_fourth_catalog !!} </p>
                 </a>
@@ -129,7 +129,7 @@
                             <img class="responsive-img w-100" src="{!! asset('storage/images/'.$product->img) !!} " alt="" style="height: 250px; width: 250px;">
                             <p class="mf-medium" style="color: #222">{!! $product->name !!}</p>
                         </div>
-                        <div class="overlay"></div>
+                        <a href="/inner-product/{{$product->id}}"><div class="overlay"></div></a>
                         <div class="spec d-none w-100 px-4">
                             @if(isset( $product->name))
                                 <p class="mb-0 mf-light" style="color: #fff">{!! $product->name !!}</p>
@@ -174,7 +174,7 @@
             </div>
         </div>
     </div>
-    <div class="section-5">
+    <div class="section-5" id="partners">
         <div class="d-flex justify-content-center">
             <div class="col-15 text-center">
                 <h2 class="header-30 mf-bold">{!! $main->section_5_header !!} </h2>

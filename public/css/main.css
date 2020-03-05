@@ -346,6 +346,7 @@
 .catalog:hover button{
     position: absolute;
     bottom: 20%;
+    left: 30%;
     display: block!important;
 }
 .new-product .new-mark{

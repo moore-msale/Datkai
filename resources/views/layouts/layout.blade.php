@@ -31,6 +31,7 @@
 {{--<div class="position-fixed" style="bottom: 0;right: 0;">--}}
 {{--    <button class="getPrice" data-toggle="modal" data-target="#getPrice" data-id="" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;"><i class="fa fa-phone" aria-hidden="true"></i></button>--}}
 {{--</div>--}}
+<div class="backdrop position-fixed d-none" onclick="closeNav();" style="width:100%; height: 100vh; background-color: rgba(0,0,0,0.26); top:0%; left:0%; z-index: 99999999;"></div>
 <div>
     <span id="popup__toggle2" onclick="openNav()">
         <div class="circlephone2" style="transform-origin: center;"></div>

@@ -2,8 +2,10 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-lg-block ">
         <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
             <div class="col-3">
-                <img src="{!! asset('storage/images/'.$settings->logo) !!}" alt="">
-                <a class="navbar-brand pl-2 mf-medium" href="/" style="color: #565656;">Даткай KG</a>
+                <a  href="/" style="text-decoration: none;">
+                    <img src="{!! asset('storage/images/'.$settings->logo) !!}" alt="">
+                    <p class="navbar-brand pl-2 mf-medium" style="color: #565656;">{!! $settings->name !!}</p>
+                </a>
             </div>
             <div class="col-2">
                 <p class="mf-light mb-1">Адрес компании:</p>
