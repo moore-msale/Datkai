@@ -7,7 +7,7 @@
             <a href="/catalog#{{$product->type}}">В каталог</a>
         </div>
         <div class="row justify-content-center py-3">
-            <div class="col-lg-6 col-12 d-flex justify-content-left align-items-center">
+            <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center">
                 <img src="{!! asset('storage/images/'.$product->img) !!} " alt="" style="max-height: 250px;max-height: 250px;">
             </div>
             <div class="col-lg-6 col-12 d-flex justify-content-left"  style="background-color: #F9BB68;border-radius: 20px;">
