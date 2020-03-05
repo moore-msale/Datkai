@@ -62,7 +62,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link mf-light header-link" href="{!! $settings->instagram !!}">
-                            <img src="{!! asset('storage/images/instagram-gold.svg') !!}" alt="" style="height: 17px;">
+                            <img src="{!! asset('storage/images/Instagram-gold.svg') !!}" alt="" style="height: 17px;">
                             Instagram
                         </a>
                     </li>
