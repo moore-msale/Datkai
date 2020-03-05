@@ -6,18 +6,18 @@
                 <a class="navbar-brand pl-2 mf-medium" href="/" style="color: #565656;">Даткай KG</a>
             </div>
             <div class="col-2">
-                <p>Адрес компании:</p>
-                <p>{!!  $settings->address !!}</p>
+                <p class="mf-light mb-1">Адрес компании:</p>
+                <p class="mf-light mb-1">{!!  $settings->address !!}</p>
             </div>
             <div class="col-2">
-                <p>Отдел стегания:</p>
-                <p>
+                <p class="mf-light mb-1">Отдел стегания:</p>
+                <p class="mf-light mb-1">
                     {!! $settings->first_department_phone !!}
                 </p>
             </div>
             <div class="col-2">
-                <p>Отдел производства посуды и масла:</p>
-                <p>
+                <p class="mf-light mb-1">Отдел производства посуды и масла:</p>
+                <p class="mf-light mb-1">
                     {!! $settings->second_department_phone !!}
                 </p>
             </div>
