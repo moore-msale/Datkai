@@ -184,13 +184,21 @@
         </div>
         <div class="mt-5  outline-none">
             <div class="d-flex justify-content-center partners-carousel">
-            @for($i=0;$i<=2;$i++)
                 @foreach($partners as $partner)
-                <div class="col-3 text-center px-0">
-                    <img class="" src="{{asset('storage/images/'.$partner->img)}}" alt="">
-                </div>
+                    <div class="col-3 text-center px-0">
+                        <img class="" src="{{asset('storage/images/'.$partner->img)}}" alt="">
+                    </div>
                 @endforeach
-            @endfor
+                @foreach($partners as $partner)
+                    <div class="col-3 text-center px-0">
+                        <img class="" src="{{asset('storage/images/'.$partner->img)}}" alt="">
+                    </div>
+                @endforeach
+                @foreach($partners as $partner)
+                    <div class="col-3 text-center px-0">
+                        <img class="" src="{{asset('storage/images/'.$partner->img)}}" alt="">
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
