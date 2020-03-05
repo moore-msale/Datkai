@@ -183,21 +183,13 @@
             </div>
         </div>
         <div class="d-flex justify-content-center mt-5 partners-carousel outline-none">
-            @foreach($partners as $partner)
-            <div class="col-3 text-center px-0">
-                <img class="responsive-img" src="{!! asset('storage/images/'.$partner->img) !!} " alt="">
-            </div>
-            @endforeach
-            @foreach($partners as $partner)
+            @for($i=0;$i<=4;$i++)
+                @foreach($partners as $partner)
                 <div class="col-3 text-center px-0">
                     <img class="responsive-img" src="{!! asset('storage/images/'.$partner->img) !!} " alt="">
                 </div>
-            @endforeach
-            @foreach($partners as $partner)
-                <div class="col-3 text-center px-0">
-                    <img class="responsive-img" src="{!! asset('storage/images/'.$partner->img) !!} " alt="">
-                </div>
-            @endforeach
+                @endforeach
+            @endfor
         </div>
     </div>
     <div class="section-6 pr-0 overflow-hidden" style="margin-top:10%;"  id="news">
