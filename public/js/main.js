@@ -1,4 +1,3 @@
-
 $('.partners-carousel-1').slick({
     centerPadding: '10px',
     slidesToShow: 4,
@@ -8,6 +7,7 @@ $('.partners-carousel-1').slick({
     autoplaySpeed:3000,
     infinite:true,
 });
+$('.partners-carousel-1', context).trigger('resize');
 $('.main-carousel').slick({
     centerPadding: '10px',
     slidesToShow: 1,
@@ -161,7 +161,6 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.right = "-300px";
 };
-$('.partners-carousel-1').slick("refresh");
 $(document).on('click','.send-price',e=>{
     let token = $('#getPrice').find('#token');
     let id = $('#getPrice').find('#product-id');
