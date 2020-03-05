@@ -24,7 +24,7 @@
                         <div class="px-4 row justify-content-center w-100 product {{$product->new ? 'new-product':''}}">
                             <img class="new-mark d-none" src="{!! asset('storage/images/new.png') !!}" alt="">
                             <img class="" src="{!! asset('storage/images/'.$product->img) !!}" alt="" style="max-width:250px;max-height: 250px;">
-                            <div class="overlay"></div>
+                            <a href="/inner-product/{{$product->id}}"><div class="overlay"></div></a>
                             <div class="spec d-none w-100 px-4">
                                 @if(isset( $product->name))
                                     <p class="mb-0 mf-light" style="color: #fff">{!! $product->name !!}</p>
@@ -45,7 +45,7 @@
                         <div class="px-4 row justify-content-center w-100 product {{$product->new ? 'new-product':''}}">
                             <img class="new-mark d-none" src="{!! asset('storage/images/new.png') !!}" alt="">
                             <img class="" src="{!! asset('storage/images/'.$product->img) !!}" alt="" style="max-width:250px;max-height: 250px;">
-                            <div class="overlay"></div>
+                            <a href="/inner-product/{{$product->id}}"><div class="overlay"></div></a>
                             <div class="spec d-none w-100 px-4">
                                 @if(isset( $product->name))
                                     <p class="mb-0 mf-light" style="color: #fff">{!! $product->name !!}</p>
@@ -67,7 +67,7 @@
                         <div class="px-4 row justify-content-center w-100 product {{$product->new ? 'new-product':''}}">
                             <img class="new-mark d-none" src="{!! asset('storage/images/new.png') !!}" alt="">
                             <img class="" src="{!! asset('storage/images/'.$product->img) !!}" alt="" style="max-width:250px;max-height: 250px;">
-                            <div class="overlay"></div>
+                            <a href="/inner-product/{{$product->id}}"><div class="overlay"></div></a>
                             <div class="spec d-none w-100 px-4">
                                 @if(isset( $product->name))
                                     <p class="mb-0 mf-light" style="color: #fff">{!! $product->name !!}</p>
@@ -88,7 +88,7 @@
                         <div class="px-4 row justify-content-center w-100 product {{$product->new ? 'new-product':''}}">
                             <img class="new-mark d-none" src="{!! asset('storage/images/new.png') !!}" alt="">
                             <img class="" src="{!! asset('storage/images/'.$product->img) !!}" alt="" style="max-width:250px;max-height: 250px;">
-                            <div class="overlay"></div>
+                            <a href="/inner-product/{{$product->id}}"><div class="overlay"></div></a>
                             <div class="spec d-none w-100 px-4">
                                 @if(isset( $product->name))
                                     <p class="mb-0 mf-light" style="color: #fff">{!! $product->name !!}</p>
