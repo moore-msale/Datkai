@@ -177,6 +177,7 @@ $(document).ready(function () {
     let btn2 = $('.allAssortment2');
     let maxHeight = 0;
     let h2_max = 0;
+    $(window).trigger('resize');
     $(".main-carousel-h2").each(function(){
         if ($(this).height() > maxHeight) { maxHeight = $(this).height(); h2_max = $(this);}
     });
