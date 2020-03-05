@@ -185,17 +185,17 @@
         <div class="mt-5">
             <div class="d-flex justify-content-center partners-carousel-1">
                 @foreach($partners as $partner)
-                    <div class="col-3 text-center px-0">
+                    <div class="text-center">
                         <img class="responsive-img" src="{{asset('storage/images/'.$partner->img)}}" alt="">
                     </div>
                 @endforeach
                 @foreach($partners as $partner)
-                    <div class="col-3 text-center px-0">
+                    <div class="text-center">
                         <img class="responsive-img" src="{{asset('storage/images/'.$partner->img)}}" alt="">
                     </div>
                 @endforeach
                 @foreach($partners as $partner)
-                    <div class="col-3 text-center px-0">
+                    <div class="text-center">
                         <img class="responsive-img" src="{{asset('storage/images/'.$partner->img)}}" alt="">
                     </div>
                 @endforeach
