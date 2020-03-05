@@ -183,7 +183,7 @@
             </div>
         </div>
         <div class="mt-5">
-            <div class="d-flex justify-content-center partners-carousel-1">
+            <div class="d-flex justify-content-center partners-carousel">
                 @foreach($partners as $partner)
                     <div class="text-center">
                         <img class="responsive-img" src="{{asset('storage/images/'.$partner->img)}}" alt="">
