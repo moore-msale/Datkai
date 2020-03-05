@@ -65,7 +65,13 @@ $(document).on('click','.send-price',e=>{
             }
         })
     }
-
+});
+$('.partners-carousel').slick({
+    slidesToShow: 4,
+    dots: false,
+    arrows:false,
+    autoplay:true,
+    infinite:true,
 });
 $('.main-carousel').slick({
     centerPadding: '10px',
@@ -76,13 +82,7 @@ $('.main-carousel').slick({
     autoplaySpeed:3000,
     infinite:true,
 });
-$('.partners-carousel').slick({
-    slidesToShow: 4,
-    dots: false,
-    arrows:false,
-    autoplay:true,
-    infinite:true,
-});
+
 $('.single-item').slick({
     centerPadding: '10px',
     slidesToShow: 4,
