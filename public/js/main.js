@@ -66,6 +66,7 @@ $(document).on('click','.send-price',e=>{
         })
     }
 });
+$(window).trigger('resize');
 $('.partners-carousel').slick({
     slidesToShow: 4,
     dots: true,
@@ -74,6 +75,7 @@ $('.partners-carousel').slick({
     autoplaySpeed:3000,
     infinite:true,
 });
+$(window).trigger('resize');
 $('.main-carousel').slick({
     centerPadding: '10px',
     slidesToShow: 1,
@@ -150,21 +152,27 @@ $('.news-carousel').slick({
 
 $('.prevBtn-news').on('click',function (e) {
     $('.news-carousel').slick('slickPrev');
+    $(window).trigger('resize');
 });
 $('.nextBtn-news').on('click',function (e) {
     $('.news-carousel').slick('slickNext');
+    $(window).trigger('resize');
 });
 $('.prevBtn-main').on('click',function (e) {
     $('.main-carousel').slick('slickPrev');
+    $(window).trigger('resize');
 });
 $('.nextBtn-main').on('click',function (e) {
     $('.main-carousel').slick('slickNext');
+    $(window).trigger('resize');
 });
 $('.prevBtn-single').on('click',function (e) {
     $('.single-item').slick('slickPrev');
+    $(window).trigger('resize');
 });
 $('.nextBtn-single').on('click',function (e) {
     $('.single-item').slick('slickNext');
+    $(window).trigger('resize');
 });
 $(document).ready(function () {
    let buttons = $('.prevNextButton-main');
