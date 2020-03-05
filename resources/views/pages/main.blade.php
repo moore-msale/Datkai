@@ -182,7 +182,8 @@
                 <p class="mf-light">{!! $main->section_5_additional_description !!} </p>
             </div>
         </div>
-        <div class="d-flex justify-content-center mt-5 partners-carousel outline-none">
+        <div class="d-flex justify-content-center mt-5  outline-none">
+            <div class="partners-carousel">
             @for($i=0;$i<=2;$i++)
                 @foreach($partners as $partner)
                 <div class="col-3 text-center px-0">
@@ -190,6 +191,7 @@
                 </div>
                 @endforeach
             @endfor
+            </div>
         </div>
     </div>
     <div class="section-6 pr-0 overflow-hidden" style="margin-top:10%;"  id="news">
