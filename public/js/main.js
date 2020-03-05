@@ -76,7 +76,13 @@ $('.main-carousel').slick({
     autoplaySpeed:3000,
     infinite:true,
 });
-
+$('.partners-carousel').slick({
+    slidesToShow: 4,
+    dots: false,
+    arrows:false,
+    autoplay:true,
+    infinite:true,
+});
 $('.single-item').slick({
     centerPadding: '10px',
     slidesToShow: 4,
@@ -112,14 +118,7 @@ $('.single-item').slick({
     ]
 });
 
-$('.partners-carousel').slick({
-    centerPadding: '30px',
-    slidesToShow: 4,
-    dots: false,
-    arrows:false,
-    autoplay:true,
-    infinite:true,
-});
+
 $('.news-carousel').slick({
     centerPadding: '10px',
     slidesToShow: 3,
