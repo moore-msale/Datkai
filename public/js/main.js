@@ -228,3 +228,4 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.right = "-300px";
 };
+$('.partners-carousel').slick("refresh");
