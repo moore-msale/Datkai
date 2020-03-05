@@ -182,7 +182,7 @@
                 <p class="mf-light">{!! $main->section_5_additional_description !!} </p>
             </div>
         </div>
-        <div class="mt-5  outline-none">
+        <div class="mt-5 outline-none">
             <div class="d-flex justify-content-center partners-carousel">
                 @foreach($partners as $partner)
                     <div class="col-3 text-center px-0">
@@ -250,14 +250,4 @@
 @include('modals.get_price')
 @endsection
 @push('scripts')
-    <script>
-        $('.partners-carousel').slick({
-            slidesToShow: 4,
-            dots: true,
-            arrows:true,
-            autoplay:true,
-            autoplaySpeed:3000,
-            infinite:true,
-        });
-    </script>
 @endpush

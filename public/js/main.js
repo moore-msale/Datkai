@@ -66,7 +66,14 @@ $(document).on('click','.send-price',e=>{
         })
     }
 });
-
+$('.partners-carousel').slick({
+    slidesToShow: 4,
+    dots: true,
+    arrows:true,
+    autoplay:true,
+    autoplaySpeed:3000,
+    infinite:true,
+});
 $('.main-carousel').slick({
     centerPadding: '10px',
     slidesToShow: 1,
@@ -211,7 +218,7 @@ $(document).ready(function() {
     $('.menu-navigation li.active').removeClass('active');
     $('.menu-navigation li a[href="' + location.pathname + '"]').closest('li').addClass('active');
 });
-
+$(window).trigger('resize');
 
 function openNav() {
     document.getElementById("mySidenav").style.right = "0px";
