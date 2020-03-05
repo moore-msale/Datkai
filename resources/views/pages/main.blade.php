@@ -240,5 +240,14 @@
 @include('modals.get_price')
 @endsection
 @push('scripts')
-
+    <script>
+        $('.partners-carousel').slick({
+            slidesToShow: 4,
+            dots: true,
+            arrows:true,
+            autoplay:true,
+            autoplaySpeed:3000,
+            infinite:true,
+        });
+    </script>
 @endpush

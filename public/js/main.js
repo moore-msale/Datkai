@@ -66,13 +66,7 @@ $(document).on('click','.send-price',e=>{
         })
     }
 });
-$('.partners-carousel').slick({
-    slidesToShow: 4,
-    dots: false,
-    arrows:false,
-    autoplay:true,
-    infinite:true,
-});
+
 $('.main-carousel').slick({
     centerPadding: '10px',
     slidesToShow: 1,
