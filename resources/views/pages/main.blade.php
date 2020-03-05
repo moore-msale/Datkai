@@ -187,7 +187,7 @@
             @for($i=0;$i<=2;$i++)
                 @foreach($partners as $partner)
                 <div class="col-3 text-center px-0">
-                    <img class="responsive-img" src="{{asset('storage/images/'.$partner->img)}}" alt="">
+                    <img class="" src="{{asset('storage/images/'.$partner->img)}}" alt="">
                 </div>
                 @endforeach
             @endfor
