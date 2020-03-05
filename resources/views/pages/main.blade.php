@@ -182,7 +182,7 @@
                 <p class="mf-light">{!! $main->section_5_additional_description !!} </p>
             </div>
         </div>
-        <div class="mt-5 d-flex justify-content-center partners-carousel">
+        <div class="mt-5  partners-carousel">
             @foreach($partners as $partner)
                 <div class="text-center">
                     <img class="responsive-img" src="{{asset('storage/images/'.$partner->img)}}" alt="">
