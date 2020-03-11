@@ -19,7 +19,7 @@
     <div class="header">
         @include('_partials.header')
     </div>
-    <div class="content px-lg-5 px-0 mt-responsive">
+    <div class="content px-lg-5 px-0 mt-responsive" id="main-layout">
         <div class="" style="position: relative;overflow: hidden;">
             @yield('content')
         </div>

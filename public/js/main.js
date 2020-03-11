@@ -82,7 +82,8 @@ $('.single-item').slick({
     slidesToShow: 4,
     dots: false,
     arrows:false,
-    autoplay:true,
+    autoplay:false,
+    adaptiveHeight:true,
     infinite:true,
     responsive: [
         {

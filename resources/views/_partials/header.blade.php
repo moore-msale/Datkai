@@ -28,7 +28,7 @@
             </div>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-lg navbar-light px-5 " style="background: #565656;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.07);">
+    <nav class="navbar navbar-expand-lg navbar-light px-5 " style="background: #259E00;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.07);">
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

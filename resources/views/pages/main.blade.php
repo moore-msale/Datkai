@@ -23,6 +23,9 @@
                 background-position: right top;
             }
         }
+        .border-green{
+            border:5px solid #259E00;
+        }
     </style>
 @endpush
 @section('content')
@@ -66,7 +69,7 @@
         </ul>
     </div>
     <div class="section-2 my-5">
-        <div class="d-flex justify-content-center" style="height: 250px;">
+        <div class="d-flex justify-content-center" style="height: 200px;">
             <div class="col-2 px-0 d-none d-lg-block" style="transform: translateY(-110%);z-index:10;"><img src="{!! asset('storage/images/leftArt.png') !!} " alt=""></div>
             <div class="col-lg-8 col-md-12 text-center">
                 <h2 class="header-30 mf-bold mt-lg-0">{!! $main->section_2_header !!} </h2>
@@ -76,38 +79,40 @@
             </div>
             <div class="col-2 px-0 text-right mt-4 d-none d-lg-block" style="transform: translateY(-70%);z-index:10;"><img src="{!! asset('storage/images/rightArt.png') !!} " alt=""></div>
         </div>
-        <div class="row justify-content-center" style="flex-wrap: wrap;">
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
-                <a href="/catalog" class="w-100">
-                    <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_first_catalog_img) !!} " alt="">
-                    <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
-                    <p class="product-desc mf-medium mt-3">{!! $main->section_2_first_catalog !!} </p>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
-                <a href="/catalog#halofiber"  class="w-100">
-                    <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_second_catalog_img) !!} " alt="">
-                    <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
-                    <p class="product-desc mf-medium mt-3">{!! $main->section_2_second_catalog !!} </p>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
-                <a href="/catalog#oil"  class="w-100">
-                    <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_third_catalog_img) !!} " alt="">
-                    <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
-                    <p class="product-desc mf-medium mt-3">{!! $main->section_2_third_catalog !!} </p>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
+        <div class="px-3">
+            <div class="row justify-content-center pt-5" style="flex-wrap: wrap;background-color: #F9BB68;border-radius: 50px;">
+                <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
+                    <a href="/catalog" class="w-100">
+                        <img class="responsive-img border-green" src="{!! asset('storage/images/'.$main->section_2_first_catalog_img) !!} " alt="">
+                        <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
+                        <p class="product-desc mf-medium mt-3">{!! $main->section_2_first_catalog !!} </p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
+                    <a href="/catalog#halofiber"  class="w-100">
+                        <img class="responsive-img border-green" src="{!! asset('storage/images/'.$main->section_2_second_catalog_img) !!} " alt="">
+                        <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
+                        <p class="product-desc mf-medium mt-3">{!! $main->section_2_second_catalog !!} </p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
+                    <a href="/catalog#oil"  class="w-100">
+                        <img class="responsive-img border-green" src="{!! asset('storage/images/'.$main->section_2_third_catalog_img) !!} " alt="">
+                        <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
+                        <p class="product-desc mf-medium mt-3">{!! $main->section_2_third_catalog !!} </p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-center px-0 catalog c-pointer row justify-content-center">
                 <a href="/catalog#servcies" class="w-100">
-                    <img class="responsive-img" src="{!! asset('storage/images/'.$main->section_2_fourth_catalog_img) !!} " alt="">
+                    <img class="responsive-img border-green" src="{!! asset('storage/images/'.$main->section_2_fourth_catalog_img) !!} " alt="">
                     <button class="main-p-btn px-4 d-none" style="max-width: 244px;height: 47px;background: #F9BB68;border-radius: 10px; border: none;">Посмотреть каталог</button>
                     <p class="product-desc mf-medium mt-3">{!! $main->section_2_fourth_catalog !!} </p>
                 </a>
             </div>
+            </div>
         </div>
     </div>
-    <div class="section-3 "  style="margin-top: 10%">
+    <div class="section-3 "  style="margin-top: 10%;">
         <div class="pr-0 overflow-hidden">
             <div class="col-15 text-center px-5">
                 <h2 class="mf-medium">{!! $main->section_3_header !!} </h2>
@@ -120,14 +125,14 @@
                     <img src="{!! asset('storage/images/rightArrow.png') !!} " alt="">
                 </a>
             </div>
-            <div class="row justify-content-center single-item">
+            <div class="row justify-content-center single-item" style="background-color: #F9BB68;border-radius:50px;">
                 @for($i=0;$i<=4;$i++)
                     @foreach($products as $product)
                     <div class="col-3 d-flex justify-content-center product m-4 py-5 {{$product->new ? 'new-product':''}}">
                         <div>
                             <img class="new-mark d-none" src="{!! asset('storage/images/new.png') !!} " alt="">
                             <img class="responsive-img w-100" src="{!! asset('storage/images/'.$product->img) !!} " alt="" style="height: 250px; width: 250px;">
-                            <p class="mf-medium" style="color: #222">{!! $product->name !!}</p>
+                            <p class="mf-medium" style="color: #222;height: 50px;">{{ \Illuminate\Support\Str::limit($product->name, 50,'...') }}</p>
                         </div>
                         <a href="/inner-product/{{$product->id}}"><div class="overlay"></div></a>
                         <div class="spec d-none w-100 px-4">
@@ -143,7 +148,7 @@
             </div>
         </div>
     </div>
-    <div class="section-4" style="margin: 0% 0% 5% 0%;">
+    <div class="section-4" style="margin: 5% 0% 5% 0%;">
         <div class="col-15 text-center px-5">
             <h2 class="mf-medium">{!! $main->section_4_header !!} </h2>
             <p class="mf-light my-4">{!! $main->section_4_description !!} </p>
@@ -182,7 +187,7 @@
                 <p class="mf-light">{!! $main->section_5_additional_description !!} </p>
             </div>
         </div>
-        <div class="mt-5  partners-carousel">
+        <div class="p-3 partners-carousel" style="background-color: #F9BB68;border-radius:50px;">
             @foreach($partners as $partner)
                 <div class="text-center">
                     <img class="responsive-img" src="{{asset('storage/images/'.$partner->img)}}" alt="">
@@ -200,7 +205,7 @@
             @endforeach
         </div>
     </div>
-    <div class="section-6 pr-0 overflow-hidden" style="margin-top:10%;"  id="news">
+    <div class="section-6 pr-0 overflow-hidden" style="margin-top:10%;" id="news">
         <div class="col-15  px-5 d-flex justify-content-start">
             <a style="text-decoration: none;color: #222;" href="/news">
                 <h2 class="mf-bold">{!! $main->section_6_header !!} </h2>
@@ -214,7 +219,7 @@
                 <img src="{!! asset('storage/images/rightArrow.png') !!} " alt="">
             </a>
         </div>
-        <div class="row justify-content-center news-carousel">
+        <div class="row justify-content-center news-carousel" style="background-color: #F9BB68;border-radius:50px;">
             @foreach($news as $new)
                 <a href="news/{{$new->id}}">
                     <div class="news-content d-flex justify-content-center tableware m-4 outline-none" style="max-height:450px;">

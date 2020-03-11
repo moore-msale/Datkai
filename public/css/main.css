@@ -59,9 +59,9 @@
     }
 }
 .main-p-btn{
-    -webkit-box-shadow: 4px 4px 0px 1px rgba(243,172,77,1);
-    -moz-box-shadow: 4px 4px 0px 1px rgba(243,172,77,1);
-    box-shadow: 4px 4px 0px 1px rgba(243,172,77,1);
+    -webkit-box-shadow: 3px 2px 0px 1px rgba(243,172,77,1);
+    -moz-box-shadow: 3px 2px 0px 1px rgba(243,172,77,1);
+    box-shadow: 3px 2px 0px 1px rgba(243,172,77,1);
 }
 .header-link{
     font-size: 15px;
@@ -87,9 +87,9 @@
     background: #F9BB68;
     border-radius: 10px;
     width: 75%;
-    -webkit-box-shadow: 4px 4px 0px 1px rgba(243,172,77,1);
-    -moz-box-shadow: 4px 4px 0px 1px rgba(243,172,77,1);
-    box-shadow: 4px 4px 0px 1px rgba(243,172,77,1);
+    -webkit-box-shadow: 3px 2px 0px 1px rgba(243,172,77,1);
+    -moz-box-shadow: 3px 2px 0px 1px rgba(243,172,77,1);
+    box-shadow: 3px 2px 0px 1px rgba(243,172,77,1);
     color: #fff;
     font-size: 18px;
     line-height: 125%;
@@ -184,7 +184,6 @@
     z-index: 999999;
 }
 .catalog:hover .product-desc{
-    color:#F3AC4D!important;
     text-decoration: underline;
 }
 .catalog:hover button{
@@ -340,7 +339,6 @@
 }
 
 .catalog:hover .product-desc{
-    color:#F3AC4D!important;
     text-decoration: underline;
 }
 .catalog:hover button{
@@ -371,7 +369,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(231, 179, 109, 0.734272) 60.72%, #F3AC4D 100%);
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(25, 118, 21, 0.734272) 58.85%, #3AAA35 100%);
     z-index: 2;
     border-radius: 20px;
     cursor: pointer;
@@ -424,6 +422,9 @@
 }
 .mt-responsive{
     margin-top: 146px;
+}
+.mt-responsive-f-fixed{
+    margin-top: 10px;
 }
 .nav-item.active a{
     text-decoration-line: underline;
@@ -535,9 +536,9 @@
 
 .sidenav .closebtn {
     position: absolute;
-    top: -12px;
+    top: -24px;
     right: 3px;
-    font-size: 36px;
+    font-size: 47px;
     margin-left: 50px;
 }
 .mo-zap {
