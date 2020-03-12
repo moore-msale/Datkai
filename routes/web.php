@@ -19,6 +19,6 @@ Route::get('/inner-product/{id}', 'PageController@innerProduct');
 Route::get('news/{id}','PageController@innerNews');
 Route::post('/sendPrice', 'MailController@sendPrice');
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'moo'], function () {
     Voyager::routes();
 });

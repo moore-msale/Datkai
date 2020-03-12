@@ -1,5 +1,10 @@
 @extends('layouts.layout')
 @push('styles')
+    <style>
+        .product:hover .overlay {
+            background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(231, 179, 109, 0.734272) 60.72%, #F3AC4D 100%)!important;
+        }
+    </style>
 @endpush
 @section('content')
     <div class="d-flex nav nav-tabs mt-5 border-0" role="tablist">
