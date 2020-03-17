@@ -25,6 +25,7 @@
         }
         .border-green{
             border:5px solid #259E00;
+            border-radius:20px;
         }
     </style>
 @endpush
